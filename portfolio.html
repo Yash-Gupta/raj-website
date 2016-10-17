@@ -1,1 +1,87 @@
-lol port hillary clinton cool guy ik
+<!DOCTYPE html>
+<html>
+	<head>
+		<script   src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="http://davidpogue.com/wp-content/themes/grainandmortar/style.css?v=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.js"></script>
+
+
+	</head>
+
+	<body>
+		<div class="header full" >
+			<div class="contentWrapper">
+				<div class="full colFullT">
+					<div class="colThirdT colHalfP headerSpacer">
+						<h1 style="color:white;margin-top:20px;">Raj Bhutoria</h1>	
+					</div>
+						
+					<div class="twoThirdsT halfP">
+						<a class="navItem" href="contact.html">Contact</a>
+						<a class="navItem active" href="portfolio.html">Portfolio</a>
+						<a class="navItem" href="about.html">About</a>
+						<a class="navItem" href="index.html">Home</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row" style="margin-top:175px;">
+				<div class="col-md-2"><img title="Abhi" class="img-fluid" src="img/1.jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/2.jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/3.jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/4.jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/5.jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/6.jpg" alt=""></div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-2"><img class="img-fluid" src="img/7.jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/8.jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/9.jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/10.jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/11.jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/12.jpg" alt=""></div>
+			</div>
+		</div>
+
+		<div tabindex="-1" class="modal fade" id="myModal" role="dialog">
+  			<div class="modal-dialog" style="text-align:center;">
+  				<div class="modal-content">
+    				<div class="modal-header">
+						<button class="close" type="button" data-dismiss="modal">×</button>
+						<h3 class="modal-title" style="font-family:'Open Sans', sans-serif;">Heading</h3>
+					</div>
+					<div class="modal-body" id="modal-body">
+		
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+   				</div>
+  			</div>
+		</div>
+		
+		<script>
+			$(document).ready(function() {
+				$('.img-fluid').click(function(){
+				      $('.modal-body').empty();
+				    var href = $(this).attr("src");
+				  	var title = $(this).attr("title");
+				  	$('.modal-title').html(title);
+				  	var elem = document.createElement("img");
+					elem.setAttribute("src", href);
+					elem.setAttribute("id", href);
+				  	document.getElementById("modal-body").appendChild(elem);
+  					$('#myModal').modal({show:true});
+				});
+			});
+		</script>
+	</body>
+
+</html>
