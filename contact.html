@@ -1,11 +1,16 @@
- 
 
-<DOCTYPE html>
 
 <html>
 
     <head>
         <title>Raj Bhutoria</title>
+        <script   src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="http://davidpogue.com/wp-content/themes/grainandmortar/style.css?v=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.js"></script>
         <!-- Latest compiled and minified CSS -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -14,6 +19,8 @@
 
             <!-- Latest compiled and minified JavaScript -->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
         <style>
         
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
@@ -23,20 +30,6 @@
   src: url('century-gothic.ttf'); /* IE9 Compat Modes */
 }
 
-.navbutton {
-            font-size:20px;
-            display:inline;
-            float:right;
-            background-color: blue;
-            border-color: transparent;
-            color:white;
-            font-family: 'Open Sans','Century Gothic', sans-serif;
-            width:auto;
-            font-weight: 400;
-            
-             padding: 20px 30px 20px 30px
-        }
-
         .titlecon {
             font-family: 'Open Sans','Century Gothic', sans-serif;
             font-weight: 700
@@ -45,7 +38,7 @@
         }
 
         label{
-            font-family: 'Roboto', 'Open Sans', sans-serif;
+            font-family: 'proxima-nova', 'Roboto', 'Open Sans', sans-serif;
             font-size: 20px;
             font-weight: 300;
         }
@@ -65,22 +58,85 @@
             border: none !important;
             -webkit-appearance: none !important;
             box-shadow: none !important;
+            resize: none !important;
+        }
+
+        .infor {
+            font-size: 16px !important;
+            font-family: 'proxima-nova','Roboto', 'Open Sans', sans-serif;
+            margin-left: 10%;
+            color:white;
+        }
+
+        .icons{
+            filter: brightness(0) invert(1);
+            margin-right: 20px;
+
         }
         
         </style>
     </head>
     <body>
-        <div class = "row" style= "background-color:blue">
-        <a href="contact.html" class = "navbutton">Contact</a>
-            <a href="portfolio.html" class = "navbutton">Portfolio</a>
-           <a href="about.html" class = "navbutton">About</a>
-           <a href="index.html" class = "navbutton">Home</a>
+        <div class="header full" >
+            <div class="contentWrapper">
+                <div class="full colFullT">
+                    <div class="colThirdT colHalfP headerSpacer">
+                        <h1 style="color:white;">Raj Bhutoria</h1>  
+                    </div>
+                        
+                    <div class="twoThirdsT halfP">
+                        <a class="navItem active" href="contact.html">Contact</a>
+                        <a class="navItem " href="portfolio.html">Portfolio</a>
+                        <a class="navItem" href="about.html">About</a>
+                        <a class="navItem" href="index.html">Home</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <center><h1 class="titlecon" style ="margin-top:400px">CONTACT ME</h1></center>
+        
         <hr>
+        
+        </center>
         <div class = "row">
-            <div class="col-md-6"></div>
+            <div class = "container"><h1 style="font-family:Roboto; font-weight:300; text-align:center;font-size:42px">Contact </h1>
+        
+            
+
+            </div>
+            <hr style="border-color:#27BDED">
+            <br>
+            <div class="col-md-1" >
+                
+            </div>
+
+            <div class = "col-md-4" style="">
+                <div class="jumbotron" style=" background-color:#424242">
+                    <center><img src="http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg" width="180px" height="180px" style="border-radius:50%">
+                        <hr style="width:80%"></center>
+
+                        <br>
+
+                    <img class="icons" src="https://cdn4.iconfinder.com/data/icons/thefreeforty/30/thefreeforty_location-32.png" height="32px" align="left" style="margin-left:30%; color:white">
+                    <p class ="infor">Fremont, CA</p>
+
+                    <br>
+
+                    <img class="icons" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/phone1-32.png" height="32px" align="left" style="margin-left:30%; color:white">
+                    <p class ="infor">(510)-123-4567</p>
+                    <br>
+
+                    <img class="icons" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/mail-32.png" height="32px" align="left" style="margin-left:30%; color:white">
+                    <p class ="infor">raj.bhutoria@gmail.com</p>
+                    <br>
+
+                </div>
+            </div>    
+
+            <div class="col-md-1" >
+                
+            </div>
+
             <div class="col-md-5">
                 <form>
             <div class="form-group">
@@ -97,10 +153,16 @@
                 
             </div>
             <br>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Subject </label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                
+            </div>
+            <br>
 
             <div class="form-group">
                 <label for="exampleTextarea">Message *</label>
-                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                <textarea class="form-control" id="exampleTextarea" rows="6"></textarea>
             </div>
             <br>
         </form>
