@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Raj Bhutoria - Home</title>
 		<script   src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -8,34 +9,49 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.js"></script>
-
+		<script src="sweetalert-master/dist/sweetalert-dev.js"></script>
+  		<link rel="stylesheet" href="sweetalert-master/dist/sweetalert.css">
+		<style type="text/css">
+			.home:hover{
+				background: rgba(0,0,0,0.3) !important;
+			}
+			#navbar{
+				position:fixed;
+				width: 100%;
+				background: transparent;
+				opacity: 1;
+			}
+		</style>
 
 	</head>
 
 	<body>
-		<div  >
+
+		<div  id="navbar" class="header full">
+
 			<div class="contentWrapper">
+
 				<div class="full colFullT">
 					<div class="colThirdT colHalfP headerSpacer">
-						<h1 style="color:white;margin-top:20px;">Raj Bhutoria</h1>	
+						<h1 style="color:white;margin-top:20px;font-family: 'Open Sans';"></h1>	
 					</div>
 						
 					<div class="twoThirdsT halfP">
-						<a class="navItem" href="contact.html">Contact</a>
-						<a class="navItem" href="portfolio.html">Portfolio</a>
-						<a class="navItem " href="gallery.html">Gallery</a>
-						<a class="navItem" href="about.html">About</a>
-						<a class="navItem " href="index.html">Home</a>
+						<a class="navItem home" href="contact.html">Contact</a>
+						<a class="navItem home" href="portfolio.html">Portfolio</a>
+						<a class="navItem home " href="gallery.html">Gallery</a>
+						<a class="navItem home" href="about.html">About</a>
+						<a class="navItem home " href="index.html">Home</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		
-			<div class="row hiya">
-				<center> <h1><b>HI, I'M RAJ BHUTORIA</b></h1> </center>
+			<div class="row hiya" >
+				<center> <h1 id="startchange"><b>HI, I'M RAJ BHUTORIA</b></h1> </center>
 			</div>
-			<div class="row worked-w">
+			<div class="row worked-w" >
 				<center> <h1 style="font-family: 'Raleway'; font-size: 30px;">I'VE WORKED WITH...</h1> 
 				<br><br>
 				<div class="col-md-1">
@@ -85,19 +101,28 @@
 		</div>
 		
 		<script>
-			$(document).ready(function() {
-				$('.img-fluid').click(function(){
-				      $('.modal-body').empty();
-				    var href = $(this).attr("src");
-				  	var title = $(this).attr("title");
-				  	$('.modal-title').html(title);
-				  	var elem = document.createElement("img");
-					elem.setAttribute("src", href);
-					elem.setAttribute("id", href);
-				  	document.getElementById("modal-body").appendChild(elem);
-  					$('#myModal').modal({show:true});
-				});
-			});
+			$(document).ready(function(){       
+   var scroll_start = 0;
+   var startchange = $('#startchange');
+   var offset = startchange.offset();
+   $(document).scroll(function() { 
+		scroll_start = $(this).scrollTop();
+		if(scroll_start > offset.top) {
+			
+          $('#navbar').css({
+    
+    WebkitTransition : 'all 0.25s linear',
+    MozTransition    : 'all .25s linear',
+    MsTransition     : 'all .25s linear',
+    OTransition      : 'all .25s linear',
+    transition       : 'all .25s linear',
+    background		 : 'rgba(41,128,185, 0.85)',
+});
+       } else {
+          $('#navbar').css('background', 'transparent');
+       }
+   });
+});
 		</script>
 	</body>
 

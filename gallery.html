@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<title>Raj Bhutoria - Gallery</title>
 		<script   src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -8,8 +9,11 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.js"></script>
-
-
+		<script src="sweetalert-master/dist/sweetalert-dev.js"></script>
+  		<link rel="stylesheet" href="sweetalert-master/dist/sweetalert.css">
+		<style type="text/css">
+			
+		</style>
 	</head>
 
 	<body>
@@ -51,9 +55,9 @@
 			</div>
 		</div>
 
-		<div tabindex="-1" class="modal fade" id="myModal" role="dialog">
-  			<div class="modal-dialog" style="text-align:center;">
-  				<div class="modal-content">
+		<div tabindex="-1" class="modal fade" style="max-height:90vh;" id="myModal" role="dialog">
+  			<div class="modal-dialog" style="max-height:90vh;text-align:center;">
+  				<div class="modal-content" style="max-height:90vh;">
     				<div class="modal-header">
 						<button class="close" type="button" data-dismiss="modal">X</button>
 						<h3 class="modal-title" style="font-family:'Open Sans', sans-serif;">Heading</h3>
@@ -62,6 +66,7 @@
 		
 					</div>
 					<div class="modal-footer">
+						<p style="float:left;">Scroll through all photos using your arrow keys. </p>
 						<button class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
    				</div>
@@ -71,16 +76,50 @@
 		<script>
 			$(document).ready(function() {
 				$('.img-fluid').click(function(){
-				      $('.modal-body').empty();
+				    $('.modal-body').empty();
 				    var href = $(this).attr("src");
 				  	var title = $(this).attr("title");
 				  	$('.modal-title').html(title);
 				  	var elem = document.createElement("img");
 					elem.setAttribute("src", href);
 					elem.setAttribute("id", href);
+					elem.setAttribute("class", 'imageBig');
 				  	document.getElementById("modal-body").appendChild(elem);
   					$('#myModal').modal({show:true});
 				});
+				
+			});
+			$(document).keydown(function(e) {
+				//alert(e.which);
+  				if(e.which == 39) {
+  					var image = $('.imageBig').attr('src');
+  					var split = image.split('/');
+  					var split2 = split[1].split('.jpg');
+  					if(!(parseInt(split2[0]) >= 9)){
+  						var filename = parseInt(split2[0]) + 1; 
+  					}else{
+  						var filename = parseInt(split2[0]);
+  					}
+  					var src = "img/" + filename + ".jpg";
+
+  					$('.imageBig').attr('src', src);
+  					$('.imageBig').attr('id', src);	
+  				}
+  				if(e.which == 37) {
+  					var image = $('.imageBig').attr('src');
+  					var split = image.split('/');
+  					var split2 = split[1].split('.jpg');
+  					if(!(parseInt(split2[0]) <= 1)){
+  						var filename = parseInt(split2[0]) - 1; 
+  					}else{
+  						var filename = parseInt(split2[0]);
+  					}
+
+  					var src = "img/" + filename + ".jpg";
+
+  					$('.imageBig').attr('src', src);
+  					$('.imageBig').attr('id', src);	
+  				}
 			});
 		</script>
 	</body>
