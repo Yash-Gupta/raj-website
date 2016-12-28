@@ -106,9 +106,20 @@ h3{
     font-family: 'Droid Sans';
 }
 
+.footer1{
+    width: 100%;
+    min-height:50px ;
+    background: #2980b9;
+}
+
+.footer1>.row>.col-md-4{
+    color:white;
+    padding:55px;
+}
+
 .hiya{
     height:90vh;
-    padding-top: 20%;
+    padding-top: 18%;
     background: url(img/cover.png) no-repeat;
     background-size: cover;
     color:white;
