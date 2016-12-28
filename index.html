@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
 		<title>Raj Bhutoria - Home</title>
 		<script   src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,6 +22,7 @@
 				width: 100%;
 				background: transparent;
 				opacity: 1;
+				z-index: 1000000;
 			}
 		</style>
 
@@ -30,8 +33,13 @@
 		<div  id="navbar" class="header full">
 
 			<div class="contentWrapper">
-
 				<div class="full colFullT">
+			<div id="threebar" style="margin-right:0px;padding:10px 20px;color:white;">
+				☰
+			</div>
+			<div id="cross" style="margin-right:0px;padding:10px 20px;color:white;display:none">
+				&#735;
+			</div>
 					<div class="colThirdT colHalfP headerSpacer">
 						<h1 style="color:white;margin-top:20px;font-family: 'Open Sans';"></h1>	
 					</div>
@@ -62,7 +70,7 @@
 					<p>Mike Honda</p>
 				</div>
 				<div class="col-md-2">
-					<img src="img/khanna.jpg" width="400" style="padding-top:20px;padding-bottom: 25px;">
+					<img class="khanna" src="img/khanna.jpg" width="400" style="padding-top:20px;padding-bottom: 25px;">
 					<p>Ro Khanna</p>
 				</div>
 				<div class="col-md-2">
@@ -135,7 +143,28 @@
        }
    });
 });
+
+
 		</script>
+		<script type="text/javascript">
+$(window).resize(larg);
+
+ function larg(){
+ 	if (document.documentElement.clientWidth < 835) {
+		console.log("mobile"); 
+		$('.twoThirdsT').hide();
+		$( "body" ).append( "<script src='navbar.js'><\/script>" ); 
+ 	}else{
+ 		$('.twoThirdsT').show();
+ 	}
+ }
+if (document.documentElement.clientWidth < 835) {
+	console.log("mobile"); 
+	$('.twoThirdsT').hide();
+    document.write("<script src='navbar.js'><\/script>");  
+ } 
+
+</script>
 	</body>
 
 </html>

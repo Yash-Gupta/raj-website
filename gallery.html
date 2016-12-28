@@ -2,6 +2,8 @@
 <html>
 	<head>
 	<title>Raj Bhutoria - Gallery</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 		<script   src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,27 +19,37 @@
 	</head>
 
 	<body>
-		<div class="header full" >
-			<div class="contentWrapper">
+		<div  id="navbar" class="header full">
+
+			<div class="contentWrapper-pages">
 				<div class="full colFullT">
+
+			<div id="threebar" style="margin-right:0px;padding:10px 20px;color:white;">
+				☰
+			</div>
+			<div id="cross" style="margin-right:0px;padding:10px 20px;color:white;display:none">
+				&#735;
+			</div>
+			<h1 class="pageTitle" style="display: none;font-family: 'Century Gothic'"> </h1>
+
 					<div class="colThirdT colHalfP headerSpacer">
-						<h1 style="font-family:'Open Sans';letter-spacing: 5px;font-size:30px; color:white;margin-top:20px;"><b>RAJ BHUTORIA</b></h1>	
+						<h1 style="font-family:'Open Sans';letter-spacing: 5px;font-size:30px; color:white;margin-top:20px;"><b>RAJ BHUTORIA</b></h1>		
 					</div>
 						
 					<div class="twoThirdsT halfP">
-						<a class="navItem" href="contact.html">Contact</a>
-						<a class="navItem" href="portfolio.html">Portfolio</a>
-						<a class="navItem active" href="gallery.html">Gallery</a>
-						<a class="navItem" href="about.html">About</a>
-						<a class="navItem" href="index.html">Home</a>
+						<a class="navItem home" href="contact.html">Contact</a>
+						<a class="navItem home" href="portfolio.html">Portfolio</a>
+						<a class="navItem home " href="gallery.html">Gallery</a>
+						<a class="navItem home" href="about.html">About</a>
+						<a class="navItem home " href="index.html">Home</a>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="container">
-			<div class="row" style="margin-top:175px;">
-				<div class="col-md-2"><img title="Abhi" class="img-fluid" src="img/1.jpg" alt=""></div>
+		<div class="container" >
+			<div class="spacer" style="margin-top:80px"></div>
+			<div class="row" id="gallery-top" style="margin-top:175px;">
+				<div class="col-md-2"><img title="Speaking" class="img-fluid" src="img/1.jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/2.jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/3.jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/4.jpg" alt=""></div>
@@ -45,7 +57,7 @@
 				<div class="col-md-2"><img class="img-fluid" src="img/6.jpg" alt=""></div>
 			</div>
 			<br>
-			<div class="row">
+			<div class="row" id="gallery-top">
 				<div class="col-md-2"><img class="img-fluid" src="img/7.jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/8.jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/9.jpg" alt=""></div>
@@ -54,16 +66,15 @@
 				<div class="col-md-2"><img class="img-fluid" src="img/12.jpg" alt=""></div>
 			</div>
 		</div>
-
+		<br><br>
 		<div tabindex="-1" class="modal fade" style="max-height:90vh;" id="myModal" role="dialog">
   			<div class="modal-dialog" style="max-height:90vh;text-align:center;">
   				<div class="modal-content" style="max-height:90vh;">
     				<div class="modal-header">
 						<button class="close" type="button" data-dismiss="modal">X</button>
-						<h3 class="modal-title" style="font-family:'Open Sans', sans-serif;">Heading</h3>
+						<h3 class="modal-title" style="font-family:'Droid Sans', sans-serif;"></h3>
 					</div>
-					<div class="modal-body" id="modal-body">
-		
+					<div class="modal-body magnify" id="modal-body">
 					</div>
 					<div class="modal-footer">
 						<p style="float:left;">Scroll through all photos using your arrow keys. </p>
@@ -86,16 +97,18 @@
 					elem.setAttribute("class", 'imageBig');
 				  	document.getElementById("modal-body").appendChild(elem);
   					$('#myModal').modal({show:true});
+  
 				});
 				
 			});
 			$(document).keydown(function(e) {
 				//alert(e.which);
+				var $items = $('.img-fluid');
   				if(e.which == 39) {
   					var image = $('.imageBig').attr('src');
   					var split = image.split('/');
   					var split2 = split[1].split('.jpg');
-  					if(!(parseInt(split2[0]) >= 9)){
+  					if(!(parseInt(split2[0]) >= $items.length)){
   						var filename = parseInt(split2[0]) + 1; 
   					}else{
   						var filename = parseInt(split2[0]);
@@ -122,6 +135,25 @@
   				}
 			});
 		</script>
+		<script type="text/javascript">
+$(window).resize(larg);
+
+ function larg(){
+ 	if (document.documentElement.clientWidth < 835) {
+		console.log("mobile"); 
+		$('.twoThirdsT').hide();
+		$( "body" ).append( "<script src='navbar.js'><\/script>" ); 
+ 	}else{
+ 		$('.twoThirdsT').show();
+ 	}
+ }
+if (document.documentElement.clientWidth < 835) {
+	console.log("mobile"); 
+	$('.twoThirdsT').hide();
+    document.write("<script src='navbar.js'><\/script>");  
+ } 
+
+</script>
 	</body>
 
 </html>
