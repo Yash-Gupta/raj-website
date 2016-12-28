@@ -1,0 +1,990 @@
+/* ==========================================================================
+	Normalize and reset CSS
+========================================================================== */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{background:#fff;color:#000;font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+html, body, button, input, select, textarea { font-size: 1em; line-height: 1.4; margin: 0; padding: 0; }
+img { vertical-align: middle; }		/* Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
+textarea { resize: vertical; }			/* Allow only vertical resizing of textareas. */
+h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: 400; } /* Browsers default headings to font-weight: bold. This resets it to normal. http://css-tricks.com/watch-your-font-weight/ */
+strong { font-weight: 400; } /* we are reserving "strong" as a keyword for custom styles in the Wordpress WYSIWIG, so we reset the default bolding behavior */
+code, kbd, pre, samp { font-family: 'adelle', arial, sans-serif !important; }
+
+body { 
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	font: 15px 'adelle', Arial, sans-serif;	
+	color: #555555;
+}
+
+p { line-height: 28px; }
+b { font-weight: 700; }
+/* add class="cf" to any element to properly contain floated elements inside of it */
+.cf:before,.content:before,.cf:after,.content:after{content:" ";display:table}.cf:after,.content:after{clear:both}.cf,.content{*zoom:1}
+.clear { clear: both; }
+
+.vertAlign {
+	display: table;
+	height: 100%;
+}
+
+.vertAlign p, .vertAlign span {
+	display: table-cell; 
+	vertical-align: middle;
+}
+.gform_wrapper input, .gform_wrapper textarea {
+	width: 91% !important;
+	padding: 2.5% !important;
+	margin-right: 4% !important;
+	background: #eee !important;
+	margin-bottom: 30px !important;
+	border: none !important;
+	font: 18px 'proxima-nova', Arial, sans-serif !important;	
+	color: #365B72 !important;
+}
+
+img,
+embed,
+object,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+a, a:link, a:visited {
+	color: #55b0f2;
+	text-decoration: none;
+	-webkit-transition: color .25s ease;
+	transition: color .25s ease;
+}
+
+a:hover {
+	color: #73c0ef;
+	text-decoration: underline;
+}
+
+/* make sure any link wrapped in a heading gets restyled properly */
+h2 a, h3 a, h4 a {
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+/* hover behavior for images as a link */
+a img {
+	-webkit-transition: opacity .25s ease;
+	transition: opacity .25s ease;
+}
+
+a img:hover {
+	cursor: pointer;
+	opacity: 0.75;
+}
+
+/* correct for Chrome default behavior of putting the orange glow around elements when focused. */
+*:focus { outline: 0; }
+
+/*text and image centering */
+.centered { text-align: center; }
+.centered img { display: inline-block; }
+
+@media all and (max-width: 768px) {
+	.centeredT { text-align: center !important; }
+	.centeredT img { display: inline-block; }
+}
+
+@media all and (max-width: 480px) {
+	.centeredP { text-align: center; }
+	.centeredP img { display: inline-block; }
+}
+
+.rfloat { float: right; }
+.lfloat { float: left; }
+.rAlign { text-align: right; }
+.greyBG { background: #f5f5f5; }
+.whiteBG { background: #fff; }
+
+h2 {
+	font: 40px/50px 'adelle', Times New Roman, serif;
+	font-weight: 100;
+	margin: 0 0 20px 0;
+}
+
+h2.dark { color: #4d4d4d !important; }
+
+h3 {
+	font: 24px/35px 'adelle', Times New Roman, serif;
+	font-weight: 700;
+	margin: 0 0 20px 0;
+	color: #BCBCBC;
+}
+
+.factText {
+	font: 20px/30px 'adelle', Times New Roman, serif;
+	margin: 0 0 20px 0;
+	color: #BCBCBC;
+}
+
+h4 {
+	font: 21px/30px 'proxima-nova', Arial, sans-serif;	
+	color: #213951;
+}
+
+.mediaHeader {
+	font: 30px/36px 'proxima-nova', Arial, sans-serif;
+	margin-top: 60px;
+}
+
+h5 {
+	font: 18px/30px 'proxima-nova', Arial, sans-serif;	
+	color: #375B71;
+	display: block;
+	float: left;
+}
+
+h6 {
+	font: 20px/26px 'proxima-nova', Arial, sans-serif;	
+	color: #555555;
+	margin: 10px 0;
+}
+
+h6 a:link, h6 a:visited, h6 a:hover { color: #555 !important; }
+
+.unplugged h6 {
+	font: 21px "proxima-nova", Arial, sans-serif;
+	color: #365B72;
+}
+
+strong { color: #000; }
+i { font-style: italic !important; }
+
+em {}
+
+.sizeList em, .unplugged em {
+	font-size: 13px;
+	font-family: 'adelle', Times New Roman, serif;
+	color: #BCBCBC;
+	font-style: normal !important;
+}
+
+.contentWrapper {
+	width: 100%;
+	max-width: 1200px; 
+	margin: 0 auto;
+	position: relative;
+}
+
+.full, .fiveSixths, .fiveSixthsCentered, .fourFifths, .fourFifthsCentered, .threeFourths, .threeFourthsCentered, .twoThirds, .twoThirdsCentered,
+.threeFifths, .threeFifthsCentered, .half, .halfCentered, .twoFifths, .twoFifthsCentered, .third, .thirdCentered, .fourth, .fourthCentered, .fifth,
+.fifthCentered, .sixth, .sixthCentered, .colFull, .colFiveSixths, .colFiveSixthsCentered, .colFourFifths, .colFourFifthsCentered, .colThreeFourths,
+.colThreeFourthsCentered, .colTwoThirds, .colTwoThirdsCentered, .colThreeFifths, .colThreeFifthsCentered, .colHalf, .colHalfCentered, .colTwoFifths,
+.colTwoFifthsCentered, .colThird, .colThirdCentered, .colFourth, .colFourthCentered, .colFifth, .colFifthCentered, .colSixth, .colSixthCentered,.fiveSixthsT,
+.fiveSixthsCenteredT, .fourFifthsT, .fourFifthsCenteredT, .threeFourthsT, .threeFourthsCenteredT, .twoThirdsT, .twoThirdsCenteredT,
+.threeFifthsT, .threeFifthsCenteredT, .halfT, .halfCenteredT, .twoFifthsT, .twoFifthsCenteredT, .thirdT, .thirdCenteredT, .fourthT, .fourthCenteredT, .fifthT,
+.fifthCenteredT, .sixthT, .sixthCenteredT, .colFullT, .colFiveSixthsT, .colFiveSixthsCenteredT, .colFourFifthsT, .colFourFifthsCenteredT, .colThreeFourthsT, .colThreeFourthsCenteredT,
+.colTwoThirdsT, .colTwoThirdsCenteredT, .colThreeFifthsT, .colThreeFifthsCenteredT, .colHalfT, .colHalfCenteredT, .colTwoFifthsT, .colTwoFifthsCenteredT, .colThirdT, 
+.colThirdCenteredT, .colFourthT, .colFourthCenteredT, .colFifthT, .colFifthCenteredT, .colSixthT, .colSixthCenteredT, .twoThirdsP, .twoThirdsCenteredP, .threeFifthsP, 
+.threeFifthsCenteredP, .halfP, .halfCenteredP, .twoFifthsP, .twoFifthsCenteredP, .thirdP, .thirdCenteredP, .colTwoThirdsP, .colTwoThirdsCenteredP, .colThreeFifthsP, 
+.colThreeFifthsCenteredP, .colHalfP, .colHalfCenteredP, .colTwoFifthsP, .colTwoFifthsCenteredP, .colThirdP, .colThirdCenteredP { float: left; position: relative; }
+
+.twoThirdsP { width: 66.6%; }.twoThirdsCenteredP { width: 66.6%; margin: 0 16.7%; }.threeFifthsP { width: 60%; }.threeFifthsCenteredP { width: 60%; width: 0 20%; }.halfCenteredP { width: 50%; margin: 0 25%; }.halfP { width: 50%; }.twoFifthsP { width: 40%; }.twoFifthsCenteredP { width: 40%; margin: 0 30%; }.thirdP { width: 33.3%; }.thirdCentered { width: 33%;  margin: 0 33.3%; }.colTwoThirdsP { width: 61%; margin: 0 2.5%; }.colTwoThirdsCenteredP { width: 61%; margin: 0 19.5%; }.colThreeFifthsP { width: 55%; margin: 0 2.5%; }.colThreeFifthsCenteredP { width: 55%; width: 0 22.5%; }.colHalfP { width: 45%; margin: 0 2.5%; }.colHalfCenteredP { width: 45%; margin: 0 27.5%; }.colTwoFifthsP { width: 36%; margin: 0 2% }.colTwoFifthsCenteredP { width: 36%; margin: 0 32%; }.colThirdP { width: 29%; margin: 0 2%; }.colThirdCenteredP { width: 29%;  margin: 0 35.5%; }
+.colFullT { width: 95%; margin: 0 2.5%; }, .fiveSixthsT { width: 83.3%; }.fiveSixthsCenteredT { width: 83.3%; margin: 0 8.35%; }.fourFifthsT { width: 80%; }.fourFifthsCenteredT { width: 80%; margin: 0 10%; }.threeFourthsT { width: 75%; }.threeFourthsCenteredT { width: 75%; margin: 0 12.5%; }.twoThirdsT { width: 66.6%; }.twoThirdsCenteredT { width: 66.6%; margin: 0 16.7%; }.threeFifthsT { width: 60%; }.threeFifthsCenteredT { width: 60%; margin: 0 20%; }.halfCenteredT { width: 50%; margin: 0 25%; }.halfT { width: 50%; margin: 0; }.twoFifthsT { width: 40%; }.twoFifthsCenteredT { width: 40%; margin: 0 30%; }.thirdT { width: 33.333333%; }.thirdCentered { width: 33%;  margin: 0 33.3%; }.fourthT { width: 25%; }.fourthCenteredT { width: 25%; margin: 0 37.5%; }.fifthT { width: 20%; }.fifthCenteredT { width: 20%; margin: 0 40%; }.sixthT { width: 16.6%; }.sixthCenteredT { width: 16.6%; margin: 0 41.7%; }
+.colFiveSixthsT { width: 78.3%; margin: 0 2.5%; }.colFiveSixthsCenteredT { width: 78.3%; margin: 0 10.85%; }.colFourFifthsT { width: 75%; margin: 0 2.5%}.colFourFifthsCenteredT { width: 75%; margin: 0 12.5%; }.colThreeFourthsT { width: 70%; margin: 0 2.5%; }.colThreeFourthsCenteredT { width: 70%; margin: 0 15%; }.colTwoThirdsT { width: 61%; margin: 0 2.5%; }.colTwoThirdsCenteredT { width: 61%; margin: 0 19.5%; }.colThreeFifthsT { width: 55%; margin: 0 2.5%; }.colThreeFifthsCenteredT { width: 55%; width: 0 22.5%; }.colHalfT { width: 45%; margin: 0 2.5%; }.colHalfCenteredT { width: 45%; margin: 0 27.5%; }.colTwoFifthsT { width: 36%; margin: 0 2% }.colTwoFifthsCenteredT { width: 36%; margin: 0 32%; }.colThirdT { width: 29%; margin: 0 2%; }.colThirdCenteredT { width: 29%;  margin: 0 35.5%; }.colFourthT { width: 21%; margin: 0 2%; }.colFourthCenteredT { width: 21%; margin: 0 39.5%; }.colFifthT { width: 17%; margin: 0 1.5%;}.colFifthCenteredT { width: 17%; margin: 0 41.5%; }.colSixthT { width: 13.66%; margin: 0 1.5%; }.colSixthCenteredT { width: 13.66%; margin: 0 43.166%; }
+
+.full { width: 100%; margin: 0; }
+.fiveSixths { width: 83.3%; margin: 0; }
+.fiveSixthsCentered { width: 83.3%; margin: 0 8.35%; }
+.fourFifths { width: 80%; margin: 0; }
+.fourFifthsCentered { width: 80%; margin: 0 10%; }
+.threeFourths { width: 75%; margin: 0; }
+.threeFourthsCentered { width: 75%; margin: 0 12.5%; }
+.twoThirds { width: 66.6%; margin: 0; }
+.twoThirdsCentered { width: 66.6%; margin: 0 16.7%; }
+.threeFifths { width: 60%; margin: 0; }
+.threeFifthsCentered { width: 60%; width: 0 20%; }
+.half { width: 50%; margin: 0; }
+.halfCentered { width: 50%; margin: 0 25%; }
+.twoFifths { width: 40%; margin: 0; }
+.twoFifthsCentered { width: 40%; margin: 0 30%; }
+.third { width: 33.333333%; margin: 0; }
+.thirdCentered { width: 33%;  margin: 0 33.3%; }
+.fourth { width: 25%; margin: 0; }
+.fourthCentered { width: 25%; margin: 0 37.5%; }
+.fifth { width: 20%; margin: 0; }
+.fifthCentered { width: 20%; margin: 0 40%; }
+.sixth { width: 16.6%; margin: 0; }
+.sixthCentered { width: 16.6%; margin: 0 41.7%; }
+
+.colFull { width: 95%; margin: 0 2.5%; }
+.colFiveSixths { width: 78.3%; margin: 0 2.5%; }
+.colFiveSixthsCentered { width: 78.3%; margin: 0 10.85%; }
+.colFourFifths { width: 75%; margin: 0 2.5%}
+.colFourFifthsCentered { width: 75%; margin: 0 12.5%; }
+.colThreeFourths{ width: 70%; margin: 0 2.5%; }
+.colThreeFourthsCentered { width: 70%; margin: 0 15%; }
+.colTwoThirds { width: 61%; margin: 0 2.5%; }
+.colTwoThirdsCentered { width: 61%; margin: 0 19.5%; }
+.colThreeFifths { width: 55%; margin: 0 2.5%; }
+.colThreeFifthsCentered { width: 55%; margin: 0 22.5%; }
+.colHalf { width: 45%; margin: 0 2.5%; }
+.colHalfCentered { width: 45%; margin: 0 27.5%; }
+.colTwoFifths { width: 36%; margin: 0 2% }
+.colTwoFifthsCentered { width: 36%; margin: 0 32%; }
+.colThird { width: 29%; margin: 0 2%; }
+.colThirdCentered { width: 29%;  margin: 0 35.5%; }
+.colFourth { width: 21%; margin: 0 2%; }
+.colFourthCentered { width: 21%; margin: 0 39.5%; }
+.colFifth { width: 17%; margin: 0 1.5%;}
+.colFifthCentered { width: 17%; margin: 0 41.5%; }
+.colSixth { width: 13.66%; margin: 0 1.5%; }
+.colSixthCentered { width: 13.66%; margin: 0 43.166%; }
+
+.latest .colFourth { width: 19%; margin: 0 3%; }
+.latest .colFourth.colFullT { width: 21%; margin: 0 2%; }
+
+@media all and (max-width: 920px) {
+	.colHalfT.colHalfCenteredP.m1 { margin-top: 30px; margin-bottom: 30px; }
+	.heightFix1 { height: auto !important; }
+	.full.m1.hideT { display: none; }
+}
+
+@media all and (max-width: 900px) {
+	.m2t { margin-top: 50px; margin-bottom: 50px; }
+}
+
+@media all and (max-width: 768px) {
+	.fiveSixths, .fiveSixthsCentered, .fourFifths, .fourFifthsCentered, .threeFourths, .threeFourthsCentered, .twoThirds, .twoThirdsCentered,
+	.threeFifths, .threeFifthsCentered, .half, .halfCentered, .twoFifths, .twoFifthsCentered, .third, .thirdCentered, .fourth, .fourthCentered, .fifth,
+	.fifthCentered, .sixth, .sixthCentered { width: 100%; margin: 0; }
+	
+	.colFull, .colFiveSixths, .colFiveSixthsCentered, .colFourFifths, .colFourFifthsCentered, .colThreeFourths,
+	.colThreeFourthsCentered, .colTwoThirds, .colTwoThirdsCentered, .colThreeFifths, .colThreeFifthsCentered, .colHalf, .colHalfCentered, .colTwoFifths,
+	.colTwoFifthsCentered, .colThird, .colThirdCentered, .colFourth, .colFourthCentered, .colFifth, .colFifthCentered, .colSixth, .colSixthCentered { width: 92%; margin: 0 4%; }
+
+	.twoThirdsP { width: 66.6%; }.twoThirdsCenteredP { width: 66.6%; margin: 0 16.7%; }.threeFifthsP { width: 60%; }.threeFifthsCenteredP { width: 60%; width: 0 20%; }.halfCenteredP { width: 50%; margin: 0 25%; }.halfP { width: 50%; }.twoFifthsP { width: 40%; }.twoFifthsCenteredP { width: 40%; margin: 0 30%; }.thirdP { width: 33.3%; }.thirdCentered { width: 33%;  margin: 0 33.3%; }.colTwoThirdsP { width: 61%; margin: 0 2.5%; }.colTwoThirdsCenteredP { width: 61%; margin: 0 19.5%; }.colThreeFifthsP { width: 55%; margin: 0 2.5%; }.colThreeFifthsCenteredP { width: 55%; width: 0 22.5%; }.colHalfP { width: 45%; margin: 0 2.5%; }.colHalfCenteredP { width: 45%; margin: 0 27.5%; }.colTwoFifthsP { width: 36%; margin: 0 2% }.colTwoFifthsCenteredP { width: 36%; margin: 0 32%; }.colThirdP { width: 29%; margin: 0 2%; }.colThirdCenteredP { width: 29%;  margin: 0 35.5%; }
+	
+	.fullT { width: 100%; margin: 0;}
+	.fiveSixthsT { width: 83.3%; margin: 0; }
+	.fiveSixthsCenteredT { width: 83.3%; margin: 0 8.35%; }
+	.fourFifthsT { width: 80%; margin: 0; }
+	.fourFifthsCenteredT { width: 80%; margin: 0 10%; }
+	.threeFourthsT { width: 75%; margin: 0; }
+	.threeFourthsCenteredT { width: 75%; margin: 0 12.5%; }
+	.twoThirdsT { width: 66.6%; margin: 0; }
+	.twoThirdsCenteredT { width: 66.6%; margin: 0 16.7%; }
+	.threeFifthsT { width: 60%; margin: 0; }
+	.threeFifthsCenteredT { width: 60%; margin: 0 20%; }
+	.halfCenteredT { width: 50%; margin: 0 25%; }
+	.halfT { width: 50%; margin: 0; }
+	.twoFifthsT { width: 40%; margin: 0; }
+	.twoFifthsCenteredT { width: 40%; margin: 0 30%; }
+	.thirdT { width: 33.333333%; margin: 0; }
+	.thirdCentered { width: 33%;  margin: 0 33.3%; }
+	.fourthT { width: 25%; margin: 0; }
+	.fourthCenteredT { width: 25%; margin: 0 37.5%; }
+	.fifthT { width: 20%; margin: 0; }
+	.fifthCenteredT { width: 20%; margin: 0 40%; }
+	.sixthT { width: 16.6%; margin: 0; }
+	.sixthCenteredT { width: 16.6%; margin: 0 41.7%; }
+
+	.colFullT { width: 92%; margin: 0 4%; }
+	.colFiveSixthsT { width: 78.3%; margin: 0 2.5%; }
+	.colFiveSixthsCenteredT { width: 78.3%; margin: 0 10.85%; }
+	.colFourFifthsT { width: 75%; margin: 0 2.5%}
+	.colFourFifthsCenteredT { width: 75%; margin: 0 12.5%; }
+	.colThreeFourthsT { width: 70%; margin: 0 2.5%; }
+	.colThreeFourthsCenteredT { width: 70%; margin: 0 15%; }
+	.colTwoThirdsT { width: 61%; margin: 0 2.5%; }
+	.colTwoThirdsCenteredT { width: 61%; margin: 0 19.5%; }
+	.colThreeFifthsT { width: 55%; margin: 0 2.5%; }
+	.colThreeFifthsCenteredT { width: 55%; width: 0 22.5%; }
+	.colHalfT { width: 45%; margin: 0 2.5%; }
+	.colHalfCenteredT { width: 45%; margin: 0 27.5%; }
+	.colTwoFifthsT { width: 36%; margin: 0 2% }
+	.colTwoFifthsCenteredT { width: 36%; margin: 0 32%; }
+	.colThirdT { width: 29%; margin: 0 2%; }
+	.colThirdCenteredT { width: 29%;  margin: 0 35.5%; }
+	.colFourthT { width: 21%; margin: 0 2%; }
+	.colFourthCenteredT { width: 21%; margin: 0 39.5%; }
+	.colFifthT { width: 17%; margin: 0 1.5%;}
+	.colFifthCenteredT { width: 17%; margin: 0 41.5%; }
+	.colSixthT { width: 13.66%; margin: 0 1.5%; }
+	.colSixthCenteredT { width: 13.66%; margin: 0 43.166%; }
+	
+	.latest .colFourth.colFullT { width: 92%; margin: 0 4%; }
+	.m1T { margin-top: 40px; margin-bottom: 40px; }
+	.pushUpP { margin-top: 50px !important; }
+	.m2t { margin-top: 50px; margin-bottom: 50px; }
+}
+
+@media all and (max-width: 480px) {
+	.fiveSixths, .fiveSixthsCentered, .fourFifths, .fourFifthsCentered, .threeFourths, .threeFourthsCentered, .twoThirds, .twoThirdsCentered,
+	.threeFifths, .threeFifthsCentered, .half, .halfCentered, .twoFifths, .twoFifthsCentered, .third, .thirdCentered, .fourth, .fourthCentered, .fifth,
+	.fifthCentered, .sixth, .sixthCentered, .colFull, .colFiveSixths, .colFiveSixthsCentered, .colFourFifths, .colFourFifthsCentered, .colThreeFourths,
+	.colThreeFourthsCentered, .colTwoThirds, .colTwoThirdsCentered, .colThreeFifths, .colThreeFifthsCentered, .colHalf, .colHalfCentered, .colTwoFifths,
+	.colTwoFifthsCentered, .colThird, .colThirdCentered, .colFourth, .colFourthCentered, .colFifth, .colFifthCentered, .colSixth, .colSixthCentered,
+	.fiveSixthsT, .fiveSixthsCenteredT, .fourFifthsT, .fourFifthsCenteredT, .threeFourthsT, .threeFourthsCenteredT, .twoThirdsT, .twoThirdsCenteredT,
+	.threeFifthsT, .threeFifthsCenteredT, .halfT, .halfCenteredT, .twoFifthsT, .twoFifthsCenteredT, .thirdT, .thirdCenteredT, .fourthT, .fourthCenteredT, .fifthT,
+	.fifthCenteredT, .sixthT, .sixthCenteredT, .colFull, .colFiveSixths, .colFiveSixthsCentered, .colFourFifths, .colFourFifthsCentered, .colThreeFourths,
+	.colThreeFourthsCentered, .colTwoThirds, .colTwoThirdsCentered, .colThreeFifths, .colThreeFifthsCentered, .colHalf, .colHalfCentered, .colTwoFifths,
+	.colTwoFifthsCentered, .colThird, .colThirdCentered, .colFourth, .colFourthCentered, .colFifth, .colFifthCentered, .colSixth, .colSixthCentered,
+	.colFiveSixthsT, .colFiveSixthsCenteredT, .colFourFifthsT, .colFourFifthsCenteredT, .colThreeFourthsT, .colThreeFourthsCenteredT, .colTwoThirdsT,
+	.colTwoThirdsCenteredT, .colThreeFifthsT, .colThreeFifthsCenteredT, .colHalfT, .colHalfCenteredT, .colTwoFifthsT, .colTwoFifthsCenteredT, .colThirdT,
+	.colThirdCenteredT, .colFourthT, .colFourthCenteredT, .colFifthT, .colFifthCenteredT, .colSixthT, .colSixthCenteredT { width: 92%; margin: 0 4%; }
+	
+	.twoThirdsP { width: 66.6%; }
+	.twoThirdsCenteredP { width: 66.6%; margin: 0 16.7%; }
+	.threeFifthsP { width: 60%; }
+	.threeFifthsCenteredP { width: 60%; width: 0 20%; }
+	.halfCenteredP { width: 50%; margin: 0 25%; }
+	.halfP { width: 50%; margin: 0; }
+	.twoFifthsP { width: 40%; }
+	.twoFifthsCenteredP { width: 40%; margin: 0 30%; }
+	.thirdP { width: 33.3%; }
+	.thirdCentered { width: 33%;  margin: 0 33.3%; }
+
+	.colFullP { width: 90% !important; margin: 0 5%; }
+	.colTwoThirdsP { width: 61%; margin: 0 2.5%; }
+	.colTwoThirdsCenteredP { width: 61%; margin: 0 19.5%; }
+	.colThreeFifthsP { width: 55%; margin: 0 2.5%; }
+	.colThreeFifthsCenteredP { width: 55%; width: 0 22.5%; }
+	.colHalfP { width: 45%; margin: 0 2.5%; }
+	.colHalfCenteredP { width: 45%; margin: 0 27.5%; }
+	.colTwoFifthsP { width: 36%; margin: 0 2% }
+	.colTwoFifthsCenteredP { width: 36%; margin: 0 32%; }
+	.colThirdP { width: 29%; margin: 0 2%; }
+	.colThirdCenteredP { width: 29%;  margin: 0 35.5%; }
+	
+	.pushP { margin-bottom: 50px; }
+	.colHalfT.colHalfCenteredP.m1 { margin-top: 20px; margin-bottom: 20px; }
+	.m3P { margin-top: 0 !important; margin-bottom: 0 !important; }
+	.fullP { width: 100%; margin-left: 0; margin-right: 0; }
+	.m2t { margin-top: 50px; margin-bottom: 50px; }
+}
+
+.m1 { margin-top: 50px; margin-bottom: 50px; }
+.m2 { margin-top: 25px; margin-bottom: 25px; }
+.m3 { margin-top: 10px; margin-bottom: 10px; }
+.p1 { padding-top: 50px; padding-bottom: 50px; }
+.p2 { padding-top: 25px; padding-bottom: 25px; }
+.p3 { padding-top: 10px; padding-bottom: 10px; }
+.p2_alt { padding-top: 35px; padding-bottom: 35px; }
+
+.showT { display: none !important; }
+.showP { display: none !important; }
+
+@media all and (max-width: 768px) {
+	.hideT { display: none !important; }
+	.showT { display: inherit !important; }
+}
+
+@media all and (max-width: 480px) {
+	.hideP { display: none !important; }
+	.showP { display: inherit !important; }
+}
+
+.page {
+	min-height: 100%;
+	width: 100%;
+	background: #fff;
+	overflow: hidden;
+}
+
+.content { padding-bottom: 250px; }
+
+.footer {
+	width: 100%;
+	clear: both;
+	position: relative;
+	min-height: 250px;
+	margin-top: -250px;
+}
+
+.mobileNavWrapper {
+	width: 250px;
+	height: 100%;
+	min-height: 100%;
+	position: fixed;
+	right: -250px;
+	top: 0;
+	background: #f5f5f5;
+	overflow-x: hidden;
+}
+
+.mobileNavWrapper, .page, .header, .footer {
+	-webkit-transition: all .30s ease;
+	transition: all .30s ease;
+	-webkit-transform: translateX(0px);
+	transform: translateX(0px);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.mobileNavWrapper.showNav, .page.showNav, .header.showNav, .footer.showNav {
+	-webkit-transform: translateX(-250px);	transform: translateX(-250px);
+}
+
+.mobileNavItem { width: 90%; padding: 15px 5%; display: block; font-size: 18px; border-bottom: 1px solid #d5d5d5; }
+.mobileNavItem:hover { background: #F5FAFC; text-decoration: none;}
+
+.menuWrapper { float: right; }
+#mobileMenuButton { display: none; cursor: pointer; float: right; }
+#mobileMenuButton img { width: 40px; margin: 15px 10px 0 0; }
+.logoLink, .mainNav { display: inline-block; }
+
+a.button1 {
+	border: 1px solid #FFF;
+	height: 40px;
+	display: block;
+	width: 200px;
+	text-align: center;
+	font-family: 'proxima-nova', Arial, sans-serif;
+	text-transform: uppercase;
+	color: #FFF;
+	font-size: 14px;
+	letter-spacing: 2px;
+	padding: 20px 0 0 0;
+	text-decoration: none;
+}
+
+a.button1:hover {
+	border: 1px solid #375B70;
+	color: #375B70;
+}
+
+a.send, #gform_submit_button_1, #gform_submit_button_2, #gform_submit_button_4 {
+	border: 1px solid #3ba0c9 !important;
+	height: 65px;
+	display: block;
+	width: 200px !important;
+	text-align: center;
+	font: 14px 'proxima-nova', Arial, sans-serif !important;
+	text-transform: uppercase;
+	color: #3ba0c9 !important;
+	letter-spacing: 2px;
+	padding: 6px 0 0;
+	text-decoration: none;
+	cursor: pointer;
+	background: #fff !important;
+}
+
+a.sendAlt { background: none !important; border-color: #fff !important; padding-top: 24px; height: 36px; color: #fff !important;}
+
+a.send:hover, #gform_submit_button_1:hover, #gform_submit_button_2:hover, #gform_submit_button_4:hover { opacity: 0.5; }
+
+.gform_wrapper label {
+	font: 18px 'proxima-nova', Arial, sans-serif !important;
+	color: #375B70 !important;
+}
+
+@media screen and (max-width: 1100px) {
+	h2 { font-size: 30px; line-height: 40px; }
+}
+
+/*--------------Update--------------*/
+.update { padding: 15px 0; }
+
+.update a span {
+	color: #3681AD;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.update a {
+	color: #2F3340;
+	display: block;
+	width: 520px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.update a:hover { color: #41A1C7; }
+
+.update img {
+	width: 5px;
+	margin: 0 0 0 10px ;
+}
+
+@media screen and (max-width: 650px) {
+	.update a { width: 270px; }
+}
+
+/*--------------Header--------------*/
+.headerSpacer { padding-bottom: 90px; }
+
+.logo {
+	width: 232px;
+	display: block;
+	float: left;
+	margin: 25px 0 0 0;
+}
+
+a.navItem {
+	color: #FFF;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: 'proxima-nova', Arial, sans-serif;
+	text-transform: uppercase;
+	padding: 30px 25px;
+	display: block;
+	letter-spacing: 2px;
+	float: right;
+}
+
+a.navItem:hover, a.navItem.active {
+	background: #2980b9; text-decoration: none;
+	color: white;
+}
+
+@media screen and (max-width: 1220px) {
+	.logo a { margin: 25px 0 0 25px; }
+}
+
+@media screen and (max-width: 1000px) {
+	.logo a { width: 180px; margin: 15px 0 0 25px; }
+}
+
+/*--------------Hero--------------*/
+
+.hero {
+	background: url(images/hero.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding-bottom: 50px;
+}
+
+.left { width: 50%; }
+.hero h2 { color: #FFF; }
+
+.hero p {
+	font-size: 19px;
+	font-weight: 300;
+	line-height: 35px;
+	margin: 0 0 30px 0;
+	color: #222;
+}
+
+@media screen and (max-width: 950px) {
+	.hero {
+		background: url(images/hero.jpg) no-repeat -900px center; 
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	
+	.hero p {
+		font-size: 16px;
+		line-height: 28px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.heroText { width: 65%; }
+	.hero {
+		background: url(images/hero.jpg) no-repeat -600px center; 
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.hero {
+		background: url(images/hero.jpg) no-repeat -800px center; 
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	.heroText { width: 100%; }
+}
+
+@media screen and (max-width: 500px) {
+	.hero {
+		background: url(images/hero.jpg) no-repeat left center; 
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	.heroText { padding-top: 0; }
+}
+
+@media screen and (max-width: 500px) {
+	.hero {
+		background: url(images/hero.jpg) no-repeat left center; 
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+}
+
+.featuredBlock_b, .featuredBlock {
+	width: 23.33%;
+	float: left;
+	padding: 50px 5%;
+	position: relative;
+	height: 100%;
+}
+
+.featuredBlock_b:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 999px;
+	width: 1px;
+	background: #5AA8D2;
+	opacity: 0.5;
+}
+
+.noOverflow { overflow: hidden; }
+.featuredImg img { width: 50%; }
+
+.featured, .footer {
+	background: url(images/bg-blue.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.featured p { color: #BCBCBC; font-size: 15px; line-height: 24px; }
+a.button2 { text-transform: uppercase; color: #27BDED; font: 15px 'proxima-nova', Arial, sans-serif; letter-spacing: 1px; }
+.latestIcon { float: left; width: 30px; margin-right: 10px; }
+.latestHeader { height: 35px; }
+hr { width: 100%; display: block; border: none; border-bottom: 1px solid #5AA8D2; opacity: 0.25; clear: both; margin: 0 0 20px; }
+.bookIcon { width: 25px; float: left; margin: 0 15px 10px 0; }
+.dpLogo { width: 55px; float: left; margin: 5px 24px 0 0; }
+a.footerNavItem { color: #BCBCBC; padding: 10px 25px; display: block; float: left; font: 15px 'proxima-nova', Arial, sans-serif; letter-spacing: 1px; }
+a.footerNavItem:hover { color: #fff; text-decoration: none; }
+.smIcon { background: rgba(47,51,65,0.5); border-radius: 100%; padding: 9px; float: right; margin: 3px 5px; }
+.smIcon img { width: 20px; display: block; margin: 0 auto; }
+.footerBlock, .footerBlockNarrow { color: #fff; opacity: 0.5; font: 14px 'proxima-nova', Arial, sans-serif; letter-spacing: 1px; }
+.footerBlockNarrow { letter-spacing: 0px; }
+.footerBlock a { color: #fff; }
+.footer hr { border-bottom: 2px solid #fff; opacity: 0.1; }
+.buyButton { margin: 5px 0; width: 150px;}
+
+@media screen and (max-width: 1200px) {
+	.latestHeader h5 { font-size: 16px; }
+	a.navItem { padding: 30px 20px !important; }
+}
+
+@media screen and (max-width: 1100px) {
+	.latestHeader h5 { font-size: 15px; }
+	a.navItem { padding: 30px 14px !important; }
+	
+}
+
+@media screen and (max-width: 1005px) {
+	.latest .colFourth {
+		margin: 0 2%;
+		width: 21%;
+	}
+	a.navItem { font-size: 14px; padding-top: 35px !important; }
+	a.footerNavItem { padding: 10px 18px; }
+}
+
+@media screen and (max-width: 910px) {
+	.latestHeader h5 { font-size: 19px; }
+	.latest .colFourth {
+		margin: 0 2%;
+		width: 46%;
+		height: 560px;
+	}
+	a.navItem { font-size: 14px; padding: 35px 10px !important; }
+	a.footerNavItem { padding: 10px; display: inline-block; float: none; }
+}
+
+@media screen and (max-width: 835px) {
+	a.navItem { display: none; }
+	#mobileMenuButton { display: block; }
+	.logo { width: 100%; }
+}
+
+.featuredBlock_b hr, .featuredBlock hr { display: none; }
+
+@media screen and (max-width: 768px) {
+	.featuredBlock_b:after { display: none; }
+	.featuredBlock_b, .featuredBlock { width: 80%; margin: 30px 10%; padding: 0; }
+	.featuredBlock_b hr, .featuredBlock hr { display: block; }
+	.featuredImg img { width: 200px; }
+	.noOverflow { padding: 30px 0; }
+	.buyButton { margin: 15px 0; }
+	.smIcon { float: none; display: inline-block; }
+}
+
+@media screen and (max-width: 650px) {
+	.dpLogo {
+		float: none;
+		margin: 0 0 20px;
+		display: inline-block;
+		width: 100%;
+	}
+	
+	.latest .colFourth { height: 590px; }
+	.dpLogo img { width: 75px; }
+}
+
+@media screen and (max-width: 545px) {
+	.latestHeader h5 { font-size: 28px; }
+	.latest a img { width: 100%; }
+	.latest .colFourth {
+		margin: 0 5% 75px;
+		width: 90%;
+		height: auto;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.buyButton { width: 50%; float: left;}
+	.buyButton img { width: 75%; margin: 0 auto; }
+	.colFourth.colHalfT.m1 { margin-top: 20px; bottom: 20px; }
+}
+
+@media all and (max-width: 350px) {
+	.latestHeader h5 { font-size: 20px; }
+	.updateArrow { display: none; }
+}
+
+.cursor {
+	width: 3px;
+	height: 36px;
+	display: inline-block;
+	background: #fff;
+}
+
+.dark .cursor { background: #4d4d4d !important; }
+
+@media screen and (max-width: 1100px) {
+	.cursor { height: 40px; }
+}
+
+.blinking {
+	-webkit-animation: blink 0.95s linear infinite;
+	animation: blink 0.95s linear infinite;
+}
+
+@-webkit-keyframes blink {  
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes blink {  
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+.header { background: #27BDED url(images/menuBG.jpg) no-repeat center center; }
+.headerNoBG { background: none !important; }
+.header .logo { margin: 20px 0 0 0; }
+.header .headerSpacer { padding-bottom: 0; }
+
+@media all and (max-width: 850px) {
+	.header .logo { margin: 20px 0 15px; }
+}
+
+.twoColumn, .threeColumn, .fourColumn {
+	-webkit-column-gap: 4em;
+	-moz-column-gap: 4em;
+	column-gap: 4em;
+}
+
+.twoColumn {
+	-webkit-columns: 2;
+	-moz-columns: 2;
+	columns: 2;
+}
+
+.twoColumn p { margin-top: 0; }
+
+@media all and (max-width: 580px) {
+	.twoColumn {
+		-webkit-columns: 1;
+		-moz-columns: 1;
+		columns: 1;
+	}
+}
+
+a.navBLeft, a.navBRight {
+	width: 45%;
+	padding: 40px 2.5%;
+	cursor: pointer;
+	display: block;
+	color: #27BDED;
+	text-decoration: none;
+	float: left;
+	margin-bottom: -1px;
+	box-shadow: -1px -1px 0 0 #27BDED;
+}
+
+a.navBRight { text-align: left; }
+a.navBRight img { height: 12px; margin: -2px 0 0 10px; }
+a.navBLeft { text-align: right; }
+a.navBLeft img { height: 12px; margin: -2px 10px 0 0; }
+a.navBLeft:hover, a.navBRight:hover { background: #F5FAFC; }
+.sizeList { padding: 2px 0 4px; cursor: pointer; color: #4d4d4d !important; transition: none !important; -webkit-transition: none !important; display: block; font-family: 'proxima-nova', Arial, sans-serif; }
+.sizeList em { font-family: 'proxima-nova', Arial, sans-serif;  }
+.sizeList:hover { opacity: 0.5; text-decoration: none; color: #4d4d4d !important; }
+
+.sizeList img {
+	display: inline-block;
+	margin: -2px 5px 0 0;
+	width: 10px;
+}
+
+.photoBlock { width: 29.33%; margin-left: 2%; margin-right: 2%; float: left; position: relative;}
+
+@media all and (max-width: 950px) {
+	.photoBlock { width: 40%; margin-left: 5%; margin-right: 5%; }
+}
+
+@media all and (max-width: 750px) {
+	.photoBlock { width: 80%; margin-left: 10%; margin-right: 10%; }
+}
+
+@media all and (max-width: 500px) {
+	.photoBlock { width: 90%; margin-left: 5%; margin-right: 5%; }
+}
+
+@media all and (max-width: 350px) {
+	.photoBlock .colTwoThirdsP, .photoBlock .thirdP { width: 90%; margin: 20px 5%; }
+	.photoBlock { text-align: center; }
+	.photoBlock img { display: inline-block; }
+}
+
+.funFact {  text-transform: uppercase; color: #27BDED; font: 15px 'proxima-nova', Arial, sans-serif; letter-spacing: 1px; margin: 20px 0 10px;}
+#pogueHead { width: 150px; cursor: pointer; -webkit-transition: opacity 0.15s ease; transition: opacity 0.15s ease;}
+#pogueHead:hover { opacity: 0.75; }
+.mediaImage { float: left; padding-right: 50px;}
+.mediaP {padding: 0 20px; }
+
+@media all and (max-width: 1040px) {
+	.mediaHeader { margin-top: 20px; }
+	.mediaImage { padding-right: 20px;}
+}
+
+@media all and (max-width: 900px) {
+	.mediaHeader { margin-top: 20px; clear: both; text-align: center; }
+	.mediaImage { margin: 0 auto 25px; padding-right: 20px; display: block; float: none;}
+}
+
+.talkArrow {
+	width: 40px;
+	cursor: pointer;
+	-webkit-transition: all .15s ease;
+	transition: all .15s ease;
+	margin-right: 10px;
+	position: absolute;
+	top: -5px;
+	left: -50px;
+}
+
+.talkArrow:hover { opacity: 0.8; }
+
+.talkArrow.down {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.talkDetails { display: none; padding-left: 50px; }
+.testimony { padding-left: 60px; position: relative;}
+.talkTitle { margin-left: 50px; position: relative; color: #4D4D4D !important; font: 26px "proxima-nova", Arial, sans-serif; cursor: pointer; width: 90%;}
+.speakTitle { color: #4D4D4D !important; font: 26px "proxima-nova", Arial, sans-serif;}
+
+.blueCaps {  text-transform: uppercase; color: #1E89C6; font: 15px 'proxima-nova', Arial, sans-serif; letter-spacing: 1px;  }
+
+.customLeft, .customRight {
+	width: 100%;
+	max-width: 585px;
+	position: relative;
+}
+
+.customRight { float: left; }
+.customLeft { float: right; }
+
+@media all and (max-width: 768px) {
+	.customLeft, .customRight { max-width: 100%; }
+}
+
+@media all and (max-width: 450px) {
+	.talkTitle { margin-left: 40px; font: 22px "proxima-nova", Arial, sans-serif; width: 90%;}
+}
+
+.blueCircle {
+	border-radius: 100%;
+	background: #27BDED;
+	width: 42px;
+	height: 42px;
+	position: absolute;
+	top: 10px;
+	left: 0;
+}
+
+.greyLine { border-bottom: 2px solid #f5f5f5; opacity: 1; }
+.autographText p { color: #555555; }
+.autographText em { color: #000; font-size: inherit; font-weight: bold; color: #000; }
+.autographText li { line-height: 28px; padding: 5px 0; }
+.autographText ul { margin: 40px 0; }
+
+.bg404 {
+	background: url(images/404_bg.jpg) no-repeat center center;
+	background-size: cover;
+	height: 700px;
+}
+
+.pushDown404 { margin-top: 200px; }
+.imgBlock { display: block; height: 125px; text-align: center; overflow: hidden;}
+
+@media all and (max-width: 800px) {
+	.pushDown404 { margin-top: 150px; }
+	.bg404 { height: 600px; }
+}
+
+@media all and (max-width: 545px) {
+	.imgBlock { display: block; height: auto; text-align: center;}
+	.latest a img { max-width: 50%; }
+}
+
+@media all and (max-width: 500px) {
+	.pushDown404 { margin-top: 100px; }
+	.bg404 { height: auto; }
+}
+
+.white { color: #fff !important; }
+.bookWrapper { height: 260px; }
+
+@media all and (max-width: 768px) {
+	.imgRight { float: right; }
+	.bookWrapper { height: 230px; }
+}
+
+@media all and (max-width: 480px) {
+	.bookWrapper { height: auto; margin-bottom: 20px;}
+}
+
+@media all and (max-width: 360px) {
+	.imgRight { float: none; }
+}
+
+.bumpRight {
+	width: 90%;
+	margin-left: 10%;
+}
+
+.textPush p { width: 95%; margin-right: 5%; }
+.bookListImg { max-height: 200px; }
+
+@media all and (max-width: 480px) {
+	.imgBook { max-width: 200px; margin-bottom: 10px; }
+}
+
+.topLine { border-top: 2px solid #f5f5f5; }
+.typeMe { visibility: hidden; }
+.typeMe.canBeSeen{ visibility: visible; }
+.talkTitle:hover { opacity: 0.75; }
+
+/* ==== 
+
+	It is incorrectly noted that Thomas Edison invented "push-ups" in 1878. Nikolai Tesla had in fact patented the activity three years earlier, under the name "Tesla-cise" 
+		- Fact Core
+
+====*/

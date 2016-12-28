@@ -1,5 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
 @font-face {
   font-family: 'Century Gothic';
   src: url('century-gothic.ttf'); /* IE9 Compat Modes */
@@ -10,9 +11,38 @@
   src: url('proxima-nova.ttf'); /* IE9 Compat Modes */
 }
 body{
+    
     margin:0;
 }
+html {
+    
+}
 
+.experience{
+    border-bottom: 3px solid #cccccc;
+    margin-top:25px;
+    padding: 0px 75px;
+    padding-bottom:25px;
+
+}
+
+h2 {
+font-family: 'Raleway';
+font-size:35px;
+margin-bottom: 0px;
+}
+li{
+    font-family: 'Open Sans';
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+h3{
+    font-family: 'Raleway';
+}
+
+.header {
+    background: #27BDED url(img/menuBG.jpg) no-repeat center center;
+}
 
 .img-fluid{
     cursor: pointer;
@@ -46,6 +76,25 @@ body{
     border-color: transparent;
     color:white;
     font-family: 'Open Sans','Century Gothic', sans-serif;
+}
+
+.worked-w{
+    background-color: white;
+    border-bottom: 2px solid #d3d3d3;
+    border-top: 2px solid #d3d3d3;
+    padding: 40px 0px;
+}
+
+.worked-w>center>.col-md-2>p{
+    font-family: 'Droid Sans';
+}
+
+.hiya{
+    height:90vh;
+    padding-top: 20%;
+    background: url(img/cover.png) no-repeat;
+    background-size: cover;
+    color:white;
 }
 
 .nav-container>.nav-buttons{
