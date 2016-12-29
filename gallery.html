@@ -49,21 +49,54 @@
 		<div class="container" >
 			<div class="spacer" style="margin-top:80px"></div>
 			<div class="row" id="gallery-top" style="margin-top:175px;">
-				<div class="col-md-2"><img title="Speaking" class="img-fluid" src="img/1.jpg" alt=""></div>
-				<div class="col-md-2"><img class="img-fluid" src="img/2.jpg" alt=""></div>
-				<div class="col-md-2"><img class="img-fluid" src="img/3.jpg" alt=""></div>
-				<div class="col-md-2"><img class="img-fluid" src="img/4.jpg" alt=""></div>
-				<div class="col-md-2"><img class="img-fluid" src="img/5.jpg" alt=""></div>
-				<div class="col-md-2"><img class="img-fluid" src="img/6.jpg" alt=""></div>
+				<div class="col-md-2"><img title="Speaking" class="img-fluid" src="img/(1).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(2).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(3).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(4).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(5).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(6).jpg" alt=""></div>
 			</div>
 			<br>
 			<div class="row" id="gallery-top">
-				<div class="col-md-2"><img class="img-fluid" src="img/7.jpg" alt=""></div>
-				<div class="col-md-2"><img class="img-fluid" src="img/8.jpg" alt=""></div>
-				<div class="col-md-2"><img class="img-fluid" src="img/9.jpg" alt=""></div>
-				<div class="col-md-2"><img class="img-fluid" src="img/10.jpg" alt=""></div>
-				<div class="col-md-2"><img class="img-fluid" src="img/11.jpg" alt=""></div>
-				<div class="col-md-2"><img class="img-fluid" src="img/12.jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(7).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(8).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(9).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(10).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(11).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(12).jpg" alt=""></div>
+			</div>
+			<br>
+			<div class="row" id="gallery-top">
+				<div class="col-md-2"><img class="img-fluid" src="img/(13).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(14).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(15).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(16).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(17).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(18).jpg" alt=""></div>
+			</div>
+			<br>
+			<div class="row" id="gallery-top">
+				<div class="col-md-2"><img class="img-fluid" src="img/(19).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(20).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(21).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(22).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(23).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(24).jpg" alt=""></div>
+			</div>
+			<br>
+			<div class="row" id="gallery-top">
+				<div class="col-md-2"><img class="img-fluid" src="img/(25).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(26).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(27).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(28).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(29).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(30).jpg" alt=""></div>
+			</div>
+			<br>
+			<div class="row" id="gallery-top">
+				<div class="col-md-2"><img class="img-fluid" src="img/(31).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(32).jpg" alt=""></div>
+				<div class="col-md-2"><img class="img-fluid" src="img/(33).jpg" alt=""></div>
 			</div>
 		</div>
 		<br><br>
@@ -106,29 +139,29 @@
 				var $items = $('.img-fluid');
   				if(e.which == 39) {
   					var image = $('.imageBig').attr('src');
-  					var split = image.split('/');
-  					var split2 = split[1].split('.jpg');
+  					var split = image.split('/(');
+  					var split2 = split[1].split(').jpg');
   					if(!(parseInt(split2[0]) >= $items.length)){
   						var filename = parseInt(split2[0]) + 1; 
   					}else{
   						var filename = parseInt(split2[0]);
   					}
-  					var src = "img/" + filename + ".jpg";
+  					var src = "img/(" + filename + ").jpg";
 
   					$('.imageBig').attr('src', src);
   					$('.imageBig').attr('id', src);	
   				}
   				if(e.which == 37) {
   					var image = $('.imageBig').attr('src');
-  					var split = image.split('/');
-  					var split2 = split[1].split('.jpg');
+  					var split = image.split('/(');
+  					var split2 = split[1].split(').jpg');
   					if(!(parseInt(split2[0]) <= 1)){
   						var filename = parseInt(split2[0]) - 1; 
   					}else{
   						var filename = parseInt(split2[0]);
   					}
 
-  					var src = "img/" + filename + ".jpg";
+  					var src = "img/(" + filename + ").jpg";
 
   					$('.imageBig').attr('src', src);
   					$('.imageBig').attr('id', src);	
