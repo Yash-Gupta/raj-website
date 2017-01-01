@@ -10,6 +10,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="other-style.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.js"></script>
         <!-- Latest compiled and minified CSS -->
@@ -21,7 +22,7 @@
             <!-- Latest compiled and minified JavaScript -->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
+        <script typ></script>
         <style>
         
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
@@ -74,6 +75,36 @@
             margin-right: 20px;
 
         }
+
+        .subtitle {
+  margin: 0 0 2em 0;
+}
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;  
+}
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid #27BDED;
+  
+  top: 0;
+  width: 6000px;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
         
         </style>
     </head>
@@ -111,12 +142,16 @@
         <div class = "row" id="contactRow">
         <div class="spacer" style="margin-top:80px"></div>
 
-            <div class = "container"><h1 style="font-family:Roboto; font-weight:300; text-align:center;font-size:42px">Contact </h1>
-        
+            <div class = "container">
+                
             
 
             </div>
-            <hr style="border-color:#27BDED">
+        
+        
+        <p style="font-family:Roboto; font-weight:700; text-align:center;font-size:28px; margin-top:60px" class="subtitle fancy"><span>CONTACT</span></p>
+     
+         
             <br>
             <div class="col-md-1" >
                 
@@ -124,7 +159,7 @@
 
             <div class = "col-md-4" style="">
                 <div class="jumbotron" style=" background-color:#424242">
-                    <center><img src="http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg" width="180px" height="180px" style="border-radius:50%">
+                    <center><img src="img/(33).jpg" style="border-radius:50%; width:180px; height:180px">
                         <hr style="width:80%"></center>
 
                         <br>
@@ -177,6 +212,9 @@
                 <textarea class="form-control" id="exampleTextarea" rows="6"></textarea>
             </div>
             <br>
+            
+            <button type = "button" style = "padding:10px; font-family:'proxima-nova', 'Roboto'; background-color:white; border: 2px solid black;font-size:18px; padding-left:20px; padding-right:20px">SEND</button>
+
         </form>
             </div>
         </div>
