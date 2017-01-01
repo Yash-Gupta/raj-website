@@ -99,6 +99,12 @@ h3{
     padding: 40px 0px;
 }
 
+.interests{
+    background-color: #2980b9;
+    padding: 40px 0px;
+    color:white;
+}
+
 .worked-w>center>.col-md-2>p{
     font-family: 'Droid Sans';
 }
