@@ -49,55 +49,8 @@
 		<div class="container" id='gallery-container' >
 			<div class="spacer" style="margin-top:80px"></div>
 			<div class="row" id="gallery-top" style="margin-top:175px;">
-			<script>
-				$.get("https://api.cosmicjs.com/v1/raj-website/media?folder=gallery",{},
-    					function(data) {
-    						var allPics = data['media'].length;
-
-    						for (var i = 0; i <= data['media'].length - 1; i++) {
-    							data['media'][i]
-    							if((i+1)%6 == 0){
-    								var add = '</div>';
-
-    								var newRow = document.createElement('div');
-    								newRow.setAttribute('class', 'row');
-    								newRow.setAttribute('style', 'margin-bottom: 20px;');
-    								newRow.setAttribute('id', 'gallery-top');
-
-									var newCol = document.createElement('div');
-    								newCol.setAttribute('class', 'col-md-2');
-
-    								var newImg = document.createElement('img');
-    								newImg.setAttribute('src', data['media'][i]['url']);
-    								newImg.setAttribute('class', 'img-fluid');
-    								newImg.setAttribute('id', i.toString());
-
-    								newCol.appendChild(newImg);
-    								newRow.appendChild(newCol);
-
-    								document.getElementById("gallery-top").innerHTML += add;
-    								document.getElementById("gallery-top").appendChild(newRow);
-
-    							}else{
-    								var newCol = document.createElement('div');
-    								newCol.setAttribute('class', 'col-md-2');
-
-    								var newImg = document.createElement('img');
-    								newImg.setAttribute('src', data['media'][i]['url']);
-    								newImg.setAttribute('class', 'img-fluid');
-    								newImg.setAttribute('id', i.toString());
-
-    								newCol.appendChild(newImg);
-
-    								document.getElementById("gallery-top").appendChild(newCol);
-    							}
-    							
-    						}
-    					}
-					);
-
-			</script>
-				<!--div class="col-md-2"><img title="Speaking" class="img-fluid" src="img/(1).jpg" alt=""></div>
+			
+				<div class="col-md-2"><img title="Speaking" class="img-fluid" src="img/(1).jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/(2).jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/(3).jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/(4).jpg" alt=""></div>
@@ -145,7 +98,7 @@
 				<div class="col-md-2"><img class="img-fluid" src="img/(31).jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/(32).jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/(33).jpg" alt=""></div>
-			</div-->
+			</div>
 		</div>
 		<br><br>
 		<div tabindex="-1" class="modal fade" style="max-height:90vh;" id="myModal" role="dialog">
@@ -191,7 +144,66 @@
 			</div>
 		</div>
 	</div>
-		
+		<script>
+				$.get("https://api.cosmicjs.com/v1/raj-website/media?folder=gallery",{},
+    					function(data) {
+    						var allPics = data['media'].length;
+    						$('#gallery-container').empty();
+    						var newSpacer = document.createElement('div');
+    						newSpacer.setAttribute('class', 'spacer');
+    						newSpacer.setAttribute('style', 'margin-top:80px');
+
+    						var newDiv = document.createElement('div');
+    						newDiv.setAttribute('id', 'gallery-top');
+    						newDiv.setAttribute('class', 'row');
+    						newDiv.setAttribute('style', 'margin-top:175px');
+
+    						document.getElementById("gallery-container").appendChild(newSpacer);
+    						document.getElementById("gallery-container").appendChild(newDiv);
+
+    						for (var i = 0; i <= data['media'].length - 1; i++) {
+    							data['media'][i]
+    							if((i+1)%6 == 0){
+    								var add = '</div>';
+
+    								var newRow = document.createElement('div');
+    								newRow.setAttribute('class', 'row');
+    								newRow.setAttribute('style', 'margin-bottom: 20px;');
+    								newRow.setAttribute('id', 'gallery-top');
+
+									var newCol = document.createElement('div');
+    								newCol.setAttribute('class', 'col-md-2');
+
+    								var newImg = document.createElement('img');
+    								newImg.setAttribute('src', data['media'][i]['url']);
+    								newImg.setAttribute('class', 'img-fluid');
+    								newImg.setAttribute('id', i.toString());
+
+    								newCol.appendChild(newImg);
+    								newRow.appendChild(newCol);
+
+    								//document.getElementById("gallery-top").innerHTML += add;
+    								document.getElementById("gallery-top").appendChild(newRow);
+
+    							}else{
+    								var newCol = document.createElement('div');
+    								newCol.setAttribute('class', 'col-md-2');
+
+    								var newImg = document.createElement('img');
+    								newImg.setAttribute('src', data['media'][i]['url']);
+    								newImg.setAttribute('class', 'img-fluid');
+    								newImg.setAttribute('id', i.toString());
+
+    								newCol.appendChild(newImg);
+
+    								document.getElementById("gallery-top").appendChild(newCol);
+    							}
+    							
+    						}
+    					}
+					);
+
+			</script>
 		<script>
 		document.querySelector('body').addEventListener('click', function(event) {
   if (event.target.className.toLowerCase() === 'img-fluid') {

@@ -63,24 +63,10 @@
 				</div>
 				<div class="col-md-9">
 				
-				<h1 id="shortdesc"><script >
-				 	$.get("https://api.cosmicjs.com/v1/raj-website/object/about",{},
-    					function(data) {
-    						 document.getElementById("shortdesc").innerHTML += data['object']['metadata']['shortdesc'];
-    					}
-					);
-
-					</script></h1>
+				<h1 id="shortdesc">Raj Bhutoria's description would be inserted here, but it should be like this long.</h1>
 				<br>
 				 <p id="aboutpara" style="column-count: 2;column-gap: 80px;">
-				 	<script >
-				 	$.get("https://api.cosmicjs.com/v1/raj-website/object/about",{},
-    					function(data) {
-    						 document.getElementById("aboutpara").innerHTML += data['object']['metadata']['description'];
-    					}
-					);
-
-					</script>
+				 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla enim justo, pulvinar sed consectetur euismod, interdum sed leo. Vivamus venenatis tortor at tellus iaculis, ac suscipit justo ornare. Nulla at porta tortor. Nullam id vestibulum tortor, in egestas tortor. Nulla ut rhoncus velit. Pellentesque viverra rhoncus nisi at malesuada. Donec eu auctor neque. Cras condimentum urna ullamcorper turpis cursus malesuada. Sed rutrum libero felis, vel vulputate dolor interdum at. Donec non diam vel nulla porttitor hendrerit. Proin finibus enim mollis erat rutrum finibus. Quisque nec leo vulputate, luctus ex at, suscipit mi. Sed eu viverra tellus. Sed porta diam non enim convallis, a vulputate ligula cursus. Cras tincidunt efficitur ipsum, vitae convallis elit consequat eget.
 				 </p>
 				</div>
 			</div>
@@ -112,6 +98,8 @@ $.get(
     	var aboutImg = data['object']['metadata']['aboutpicture']['url'];
 
     	document.getElementById('aboutpicture').setAttribute('src', aboutImg);
+    	document.getElementById("shortdesc").innerHTML = data['object']['metadata']['shortdesc'];
+    	document.getElementById("aboutpara").innerHTML = data['object']['metadata']['description'];
 
     }
 );
