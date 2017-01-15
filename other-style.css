@@ -658,7 +658,7 @@ hr { width: 100%; display: block; border: none; border-bottom: 1px solid #5AA8D2
 .dpLogo { width: 55px; float: left; margin: 5px 24px 0 0; }
 a.footerNavItem { color: #BCBCBC; padding: 10px 25px; display: block; float: left; font: 15px 'proxima-nova', Arial, sans-serif; letter-spacing: 1px; }
 a.footerNavItem:hover { color: #fff; text-decoration: none; }
-.smIcon { background: rgba(47,51,65,0.5); border-radius: 100%; padding: 9px; float: right; margin: 3px 5px; }
+.smIcon { background: #555555; border-radius: 100%; padding: 9px; float: right; margin: 3px 5px; }
 .smIcon img { width: 20px; display: block; margin: 0 auto; }
 .footerBlock, .footerBlockNarrow { color: #fff; opacity: 0.5; font: 14px 'proxima-nova', Arial, sans-serif; letter-spacing: 1px; }
 .footerBlockNarrow { letter-spacing: 0px; }
