@@ -14,7 +14,10 @@
 		<script src="sweetalert-master/dist/sweetalert-dev.js"></script>
   		<link rel="stylesheet" href="sweetalert-master/dist/sweetalert.css">
 		<style type="text/css">
-			
+			.svg :hover{
+				cursor:pointer;
+				opacity: 1;
+			}
 		</style>
 	</head>
 
@@ -109,6 +112,25 @@
 						<h3 class="modal-title" style="font-family:'Droid Sans', sans-serif;"></h3>
 					</div>
 					<div class="modal-body magnify" id="modal-body">
+						<div class="row">
+							<div class="col-md-1 svg" onclick="lastPic()" style="opacity: 0.4;">
+								<div class="left" style="margin-top:15vh;text-alight:left;font-size: 48px; float:left;width:20px; display: inline-block;">
+									<img  style="max-width: initial;"  src="img/left-arrow-hover.png" alt="" width="150%">
+							 		
+								</div>
+							</div>
+							<div class="col-md-10" style="padding:0;"><div id="modal-pic"></div></div>
+							<div class="col-md-1 svg" onclick="nextPic()"  style="padding:0;opacity: 0.4;">
+								<div class="right" style="margin-top:15vh;text-alight:left;font-size: 48px; margin-right:50px;width:20px; display: inline-block;padding:0;">
+							 		<img style="max-width: initial;" src="img/right-arrow-hover.png" alt="" width="150%">
+								</div>
+							</div>
+						</div>
+						
+
+						
+							
+						
 					</div>
 					<div class="modal-footer">
 						<p style="float:left;">Scroll through all photos using your arrow keys. </p>
@@ -208,7 +230,8 @@
 		document.querySelector('body').addEventListener('click', function(event) {
   if (event.target.className.toLowerCase() === 'img-fluid') {
     console.log('testing2');
-				    $('.modal-body').empty();
+				    $('#modal-pic').empty();
+
 				    var href = event.target.getAttribute("src");
 				  	var title = event.target.getAttribute("title");
 				  	var id = event.target.getAttribute("id");
@@ -217,11 +240,35 @@
 					elem.setAttribute("src", href);
 					elem.setAttribute("id", id);
 					elem.setAttribute("class", 'imageBig');
-				  	document.getElementById("modal-body").appendChild(elem);
+				  	document.getElementById("modal-pic").appendChild(elem);
   					$('#myModal').modal({show:true});
   }
 });
-				
+function nextPic() {
+var $items = $('.img-fluid');
+  					var image = $('.imageBig').attr('id');
+ 					$.get("https://api.cosmicjs.com/v1/raj-website/media?folder=gallery",{},
+    					function(data) {
+    						var i = parseInt(image);
+    						 var nextURL = data['media'][i+1]['url'];
+    						 $('.imageBig').attr('src', nextURL);
+  							$('.imageBig').attr('id', i+1)
+    					}
+					);
+
+	}	
+	function lastPic(){
+var $items = $('.img-fluid');
+  					var image = $('.imageBig').attr('id');
+ 					$.get("https://api.cosmicjs.com/v1/raj-website/media?folder=gallery",{},
+    					function(data) {
+    						var i = parseInt(image);
+    						 var nextURL = data['media'][i-1]['url'];
+    						 $('.imageBig').attr('src', nextURL);
+  							$('.imageBig').attr('id', i-1)
+    					}
+					);
+	}
 			$(document).keydown(function(e) {
 				//alert(e.which);
 				var $items = $('.img-fluid');
