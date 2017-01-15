@@ -644,7 +644,6 @@ a.navItem:hover, a.navItem.active {
 .featuredImg img { width: 50%; }
 
 .featured, .footer {
-	background: url(images/bg-blue.jpg) no-repeat center center; 
 	-webkit-background-size: cover;
 	background-size: cover;
 }
