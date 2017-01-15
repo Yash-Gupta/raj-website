@@ -8,12 +8,32 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="other-style.css">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="animate.css">
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.js"></script>
 
 	<style type="text/css">
 		@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+		.divider-buttons{
+			padding:0px; 
+			font-family: 'Lato'; 
+			background-color:rgba(0,0,0,0.3); 
+			border: none;
+			font-size:13px; 
+			padding-left:20px; 
+			padding-right:20px; 
+			color:white; 
+			line-height:0.8;
+			padding:10px 28px;
+			display: inline-block;
+			margin-right:5px
+		}
+
+		.divider-buttons.active, .divider-buttons:hover{
+			background-color: rgba(0,0,0,0.7);
+		}
 	</style>
 	</head>
 
@@ -45,283 +65,33 @@
 				</div>
 			</div>
 		</div>
+		<div class = "row" style = "">
+			<center>
+				<div style = "height:100px; width:100%"></div>
 
-		<div class="container" id="portfolioCont" >
-			<div class="row" style="clear:both;margin-top:15%;">	
-				
-					<div class = "col-md-3" style = "margin-left: 50px;height:450px; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center">
-						<img src = "img/(38).jpg" alt="smiley" style = "object-fit: cover;height:50%; width:100%; padding:0px !important">
-						<br>
-						<h3 style = "font-family: inherit;font-size:26px; color: black; margin-top:35px; padding:0px">Ro Khanna's Chair</h3>
-						<p style = "font-family: 'Lato'; color:rgb(222, 60, 47); margin-top:-28px; font-size:13px; font-weight:400">OCT 2015 - PRESENT<p>
-						
-						
-						<p style = "font-family: 'Lato'; font-size:16px; font-weight:300; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:40px;padding-right:40px ">Leading a group of students to tackle community issues.</p>
+				<button class="divider-buttons active" id="experienceBtn" goto="experience" type = "submit">EXPERIENCE</button>
 
+				<button class="divider-buttons" id="awardsBtn" goto="awards" type = "submit" >AWARDS</button>
 
-						<button style = "font-family: 'Lato'; font-size:16px; font-weight:400; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:40px;padding-right:40px; border: none; background-color:transparent " data-toggle="modal" data-target="#myModal">READ MORE</button>
-						
-						<div id="myModal" class="modal fade" role="dialog">
-						  <div class="modal-dialog modal-lg">
+				<button class="divider-buttons" id="volunteerBtn" goto="volunteer" type = "submit">VOLUNTEERING</button>
 
-						    <!-- Modal content-->
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <button type="button" class="close" data-dismiss="modal">&times;</button>
-						        <h2 class="modal-title" >Chair at Student Advisory Committee of Ro Khanna</h2>
-						      </div>
-						      <div class="modal-body" style = "text-align:left"><center>
-						        <img src = "img/(38).jpg" alt="smiley" style = "height:50%; width:50%; padding:0px !important">
-						        </center>
-						        <p style = "margin-top:40px; margin-left:30px">&nbsp;&nbsp;&nbsp;&nbsp;Leading a group of handpicked and highly-driven high school students from the 17th Congressional District to tackle issues affecting the community and to elect Ro Khanna for US Congress. We accomplish from organizing large-scale community events, rallies, and workshops. Engaging and managing hundreds of students throughout the district for building the future of the Bay Area. Advising Ro and the community on major policy issues affecting students, parents, and communities.
-
-						<ul> 
-						<li>Meeting with high-ranking government officials to gather support and build relationships.</li> 
-						<li>Building campaign infrastructure from the ground-up in an executive leadership role. </li>
-						<li>Organizing events with hundreds of students and reached thousands of voters. </li>
-						</ul>
-						</p>
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						      </div>
-						    </div>
-
-						  </div>
-						</div>
-					</div>
+				 <div style = "height:50px; width:100%"></div>
 
 
 
-					<div class = "col-md-3" style = "margin-left: 50px;height:450px; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center">
-						<img src = "img/(35).jpg" alt="smiley" style = "height:50%; width:100%; padding:0px !important">
-						<br>
-						<h3 style = "font-family: inherit;font-size:26px; color: black; margin-top:35px; padding:0px">HDMf President</h3>
-						<p style = "font-family: 'Lato'; color:rgb(222, 60, 47); margin-top:-28px; font-size:13px; font-weight:400">JUN 2015 - PRESENT<p>
-						
-						
-						<p style = "font-family: 'Lato'; font-size:16px; font-weight:300; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:20px;padding-right:20px ">President of Happy Day Microfunds - a microfunding organization.</p>
+			</center>
+		</div>
 
-
-						<button style = "font-family: 'Lato'; font-size:16px; font-weight:400; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:40px;padding-right:40px; border: none; background-color:transparent " data-toggle="modal" data-target="#myModal2">READ MORE</button>
-
-						<div id="myModal2" class="modal fade" role="dialog">
-						  <div class="modal-dialog modal-lg">
-
-						    <!-- Modal content-->
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <button type="button" class="close" data-dismiss="modal">&times;</button>
-						        <h2 class="modal-title" >President at Happy Day Microfunds</h2>
-						      </div>
-						      <div class="modal-body" style = "text-align:left"><center>
-						        <img src = "img/(35).jpg" alt="smiley" style = "height:50%; width:50%; padding:0px !important">
-						        </center>
-						        <p style = "margin-top:40px; margin-left:30px">&nbsp;&nbsp;&nbsp;&nbsp;Treasurer of Happy Day Microfunds. HDMf is a youth-led microfunding organization which connects under-served student entrepreneurs with the seed capital they need. HDMf has been addressed by President Barack Obama under his 2012 "Back to School Night"​ speech to the nation. We've had many successful student entrepreneurs whom created organizations which have made an impact on society and paved the way for innovation.
-
-
-						<ul> 
-						<li>Developed business plans and negotiated agreements with young entrepreneurs.</li> 
-						<li>Successfully attracted students within the Bay Area to develop innovative ideas and products. </li>
-						<li>Acted as a catalyst for startup culture and student driven business within the Silicon Valley.</li>
-						</ul>
-						</p>
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						      </div>
-						    </div>
-
-						  </div>
-						</div>
-					</div>
+		<div class="container" id="portfolioCont">
+			<div class="row" id="experience" style="clear:both;margin-top:0%;margin-bottom:50px">		
 					
-					<!--<div class = "col-md-3" style = "height:450px; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
-					</div>-->
+			</div>
+			<div class="row" id="awards" style="clear:both;margin-top:0%;margin-bottom:50px">		
 					
-			
-					<div class = "col-md-3" style = "margin-left: 50px;height:450px; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center">
-						<img src = "img/(34).jpg" alt="smiley" style = "height:50%; width:100%; padding:0px !important">
-						<br>
-						<h3 style = "font-family: inherit;font-size:26px; color: black; margin-top:35px; padding:0px">Radio Host</h3>
-						<p style = "font-family: 'Lato'; color:rgb(222, 60, 47); margin-top:-28px; font-size:13px; font-weight:400">FEB 2013 - MAR 2015 <p>
-						
-						
-						<p style = "font-family: 'Lato'; font-size:16px; font-weight:300; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:30px;padding-right:30px ">Radio show host of community radio show, Radio Zindagi.</p>
 
-
-						<button style = "font-family: 'Lato'; font-size:16px; font-weight:400; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:40px;padding-right:40px; border: none; background-color:transparent " data-toggle="modal" data-target="#myModal3">READ MORE</button>
-
-						<div id="myModal3" class="modal fade" role="dialog">
-						  <div class="modal-dialog modal-lg">
-
-						    <!-- Modal content-->
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <button type="button" class="close" data-dismiss="modal">&times;</button>
-						        <h2 class="modal-title" >Radio Show Host at Radio Zindagi ZKE</h2>
-						      </div>
-						      <div class="modal-body" style = "text-align:left"><center>
-						        <img src = "img/(34).jpg" alt="smiley" style = "height:50%; width:50%; padding:0px !important">
-						        </center>
-						        <p style = "margin-top:40px; margin-left:30px">&nbsp;&nbsp;&nbsp;&nbsp;Radio show host of weekly community radio show ZKE on the largest Indian radio station in the USA, Radio Zindagi. Spoke with several prominent leaders and distinguished individuals within the community and on key topics impacting society today. Large audience with many active listeners and callers.
-
-
-						<ul> 
-						<li>Developed plans, coordinated a team, worked under pressure.</li> 
-						<li>Outreached to over 10000 daily listeners. </li>
-						<li> Unscripted interviews and talk shows, researched events, and developed speaking skills. </li>
-						</ul>
-						</p>
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						      </div>
-						    </div>
-
-						  </div>
-						</div>
-				
-					</div>
-					<div class = "col-md-3" style = "margin-left: 50px;margin-top:50px;height:450px; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center">
-						<img src = "img/(40).jpg" alt="smiley" style = "height:50%; width:100%; padding:0px !important">
-						<br>
-						<h3 style = "font-family: inherit;font-size:26px; color: black; margin-top:35px; padding:0px">Mike Honda Fellow</h3>
-						<p style = "font-family: 'Lato'; color:rgb(222, 60, 47); margin-top:-28px; font-size:13px; font-weight:400">JUL 2014 - NOV 2014 <p>
-						
-						
-						<p style = "font-family: 'Lato'; font-size:16px; font-weight:300; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:30px;padding-right:30px ">Key member of several offices within the Alameda County.</p>
-
-
-						<button style = "font-family: 'Lato'; font-size:16px; font-weight:400; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:40px;padding-right:40px; border: none; background-color:transparent " data-toggle="modal" data-target="#myModal4">READ MORE</button>
-
-						<div id="myModal4" class="modal fade" role="dialog">
-						  <div class="modal-dialog modal-lg">
-
-						    <!-- Modal content-->
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <button type="button" class="close" data-dismiss="modal">&times;</button>
-						        <h2 class="modal-title" >Organizing Fellow for Mike Honda</h2>
-						      </div>
-						      <div class="modal-body" style = "text-align:left"><center>
-						        <img src = "img/(40).jpg" alt="smiley" style = "height:50%; width:50%; padding:0px !important">
-						        </center>
-						        <p style = "margin-top:40px; margin-left:30px">&nbsp;&nbsp;&nbsp;&nbsp;Performed as a key member of several offices within the Alameda County. Developed plans for voter persuasion and turnout efforts. Coordinated recruitment at local high schools, colleges, and student organizations to develop to become more involved and civically engaged.
-
-						<ul> 
-						<li>Reached thousands of voters and community members.</li> 
-						<li>Developed critical skills and piqued interest within civically active students.  </li>
-						<li>Recruited and grew lasting campaign volunteers and members. </li>
-						</ul>
-						</p>
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						      </div>
-						    </div>
-
-						  </div>
-						</div>
-					</div>
-
-
-					<div class = "col-md-3" style = "margin-left: 50px;margin-top:50px;height:450px; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center">
-						<img src = "img/(6).jpg" alt="smiley" style = "height:50%; width:100%; padding:0px !important">
-						<br>
-						<h3 style = "font-family: inherit;font-size:26px; color: black; margin-top:35px; padding:0px">Senior Intern</h3>
-						<p style = "font-family: 'Lato'; color:rgb(222, 60, 47); margin-top:-28px; font-size:13px; font-weight:400">JUN 2013 - AUG 2014<p>
-						
-						
-						<p style = "font-family: 'Lato'; font-size:16px; font-weight:300; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:20px;padding-right:20px ">Interned at the Office of California Senator Bob Wieckowski.</p>
-
-
-						<button style = "font-family: 'Lato'; font-size:16px; font-weight:400; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:40px;padding-right:40px; border: none; background-color:transparent " data-toggle="modal" data-target="#myModal5">READ MORE</button>
-
-						<div id="myModal5" class="modal fade" role="dialog">
-						  <div class="modal-dialog modal-lg">
-
-						    <!-- Modal content-->
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <button type="button" class="close" data-dismiss="modal">&times;</button>
-						        <h2 class="modal-title" >Senior Intern for Bob Wieckowski</h2>
-						      </div>
-						      <div class="modal-body" style = "text-align:left"><center>
-						        <img src = "img/(6).jpg" alt="smiley" style = "height:50%; width:50%; padding:0px !important">
-						        </center>
-						        <p style = "margin-top:40px; margin-left:30px">&nbsp;&nbsp;&nbsp;&nbsp;Interned at the Office of California Senator Bob Wieckowski, as well as developed election campaign through team efforts for Senator Wieckowski.
-
-
-						<ul> 
-						<li>Researched current events, issues, as well as policy initiatives.</li> 
-						<li>Sorted and interacted with constituent emails, and maintained correspondence. </li>
-						<li>Organized and staffed several events with Senator Wieckowski.  </li>
-						<li>Developed and updated important databases.</li>
-						</ul>
-						</p>
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						      </div>
-						    </div>
-
-						  </div>
-						</div>
-					</div>
-					
-					<!--<div class = "col-md-3" style = "height:450px; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-					</div>-->
-
-			
-					<div class = "col-md-3" style = "margin-left: 50px;margin-top:50px;height:450px; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center">
-						<img src = "img/(39).jpg" alt="smiley" style = "object-fit: cover;height:50%; width:100%; padding:0px !important">
-						<br>
-						<h3 style = "font-family: inherit;font-size:26px; color: black; margin-top:35px; padding:0px">MSJ Mock Trial</h3>
-						<p style = "font-family: 'Lato'; color:rgb(222, 60, 47); margin-top:-28px; font-size:13px; font-weight:400">JUN 2015 - PRESENT <p>
-						
-						
-						<p style = "font-family: 'Lato'; font-size:16px; font-weight:300; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:25px;padding-right:25px ">Publicity Director of the Mock Trial team based in Alameda County.</p>
-
-
-						<button style = "font-family: 'Lato'; font-size:16px; font-weight:400; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:40px;padding-right:40px; border: none; background-color:transparent " data-toggle="modal" data-target="#myModal6">READ MORE</button>
-
-						<div id="myModal6" class="modal fade" role="dialog">
-						  <div class="modal-dialog modal-lg">
-
-						    <!-- Modal content-->
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <button type="button" class="close" data-dismiss="modal">&times;</button>
-						        <h2 class="modal-title" >President of Mission San Jose Mock Trial</h2>
-						      </div>
-						      <div class="modal-body" style = "text-align:left"><center>
-						        <img src = "img/(39).jpg" alt="smiley" style = "height:50%; width:50%; padding:0px !important">
-						        </center>
-						        <p style = "margin-top:40px; margin-left:30px">Publicity Director and an attorney of the Mission San Jose Mock Trial team, an accredited Mock Trial team based in Alameda County. MSJ Mock Trial has quickly grown since it's recent inception and attracted many new members. Additionally, MSJ Mock Trial has quickly surpassed expectations and built a reputation for dedicated work ethic and effort which has led to an ever increasing reputation of victories.
-
-
-
-						<ul> 
-						<li>Developed publicity mediums and attracted numerous new members. </li> 
-						<li>Built curriculums, seminars, and lesson plans. </li>
-						<li> Worked in high-pressure team oriented environments with high rates of success.  </li>
-						<li> Developed and utilized many skills including analytical, speaking, and leadership qualities.  </li>
-						</ul>
-						</p>
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						      </div>
-						    </div>
-
-						  </div>
-						</div>
-
-					</div>
-					
+			</div>
+			<div class="row" id="volunteer" style="clear:both;margin-top:0%;margin-bottom:50px">		
 					
 
 			</div>
@@ -357,27 +127,171 @@
 				  	document.getElementById("modal-body").appendChild(elem);
   					$('#myModal').modal({show:true});
 				});
+
+				$('.divider-buttons').click(function(){
+					var showDiv = $(this).attr('goto');
+					$('#experienceBtn').attr('class', 'divider-buttons');
+					$('#awardsBtn').attr('class', 'divider-buttons');
+					$('#volunteerBtn').attr('class', 'divider-buttons');
+
+					$(this).attr('class', 'divider-buttons active');
+					$('#experience').fadeOut(250);
+					$('#awards').fadeOut(250);
+					$('#volunteer').hide();
+					$('#' + showDiv).show();
+					$('#' + showDiv).addClass("animated fadeInUp");
+
+				});
+
+				$('#experience').show();
+				$('#awards').hide();
+				$('#volunteer').hide();
+
 			});
 		</script>
-				<script type="text/javascript">
-$(window).resize(larg);
+		<script type="text/javascript">
+			
+		</script>
 
- function larg(){
- 	if (document.documentElement.clientWidth < 835) {
-		console.log("mobile"); 
-		$('.twoThirdsT').hide();
-		$( "body" ).append( "<script src='navbar.js'><\/script>" ); 
- 	}else{
- 		$('.twoThirdsT').show();
- 	}
- }
-if (document.documentElement.clientWidth < 835) {
-	console.log("mobile"); 
-	$('.twoThirdsT').hide();
-    document.write("<script src='navbar.js'><\/script>");  
- } 
+		<script type="text/javascript">
+			$(window).resize(larg);
 
-</script>
+ 			function larg(){
+ 				if (document.documentElement.clientWidth < 835) {
+					console.log("mobile"); 
+					$('.twoThirdsT').hide();
+					$( "body" ).append( "<script src='navbar.js'><\/script>" ); 
+ 				}else{
+ 					$('.twoThirdsT').show();
+ 				}
+ 			}
+			if (document.documentElement.clientWidth < 835) {
+				console.log("mobile"); 
+				$('.twoThirdsT').hide();
+ 			   document.write("<script src='navbar.js'><\/script>");  
+ 			} 
+
+
+			$.get("https://api.cosmicjs.com/v1/raj-website/object-type/portfolio-objects",{},
+			    function(data) {
+			    	for(var i = 0; i< data['objects'].length; i++){
+			    		var pictureURL = data['objects'][i]['metadata']['picture']['url'];
+			    		var date = data['objects'][i]['metadata']['date'];
+			    		var shortdesc = data['objects'][i]['metadata']['shortdesc'];
+			    		var longdesc = data['objects'][i]['metadata']['longdesc'];
+			    		var title = data['objects'][i]['metadata']['title'];
+			    		var longtitle = data['objects'][i]['metadata']['longtitle'];
+			    		var type = data['objects'][i]['metadata']['type'];
+
+    					var row = document.getElementById(type);
+    					var col = document.createElement('div');
+    					col.setAttribute('style', 'margin-left: 50px;margin-bottom:50px;height:450px; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center');
+    					col.setAttribute('class', 'col-md-3');
+
+    						var img = document.createElement('img');
+    						img.setAttribute('src', pictureURL);
+    						img.setAttribute('style', 'object-fit: cover;height:50%; width:100%; padding:0px !important');
+
+    						var br = document.createElement('br');
+
+    						var h3 = document.createElement('h3');
+    						h3.setAttribute('style', 'font-family: inherit;font-size:26px; color: black; margin-top:35px; padding:0px');
+    						h3.innerHTML = title;
+
+    						var dateP = document.createElement('p');
+    						dateP.setAttribute('style', "font-family: 'Lato'; color:rgb(222, 60, 47); margin-top:-28px; font-size:13px; font-weight:400");
+    						dateP.innerHTML = date;
+
+    						var shortDescP = document.createElement('p');
+    						shortDescP.setAttribute('style', "font-family: 'Lato'; font-size:16px; font-weight:300; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:40px;padding-right:40px ");
+    						shortDescP.innerHTML = shortdesc;
+
+
+    						var button = document.createElement('button');
+    						button.setAttribute('style', "font-family: 'Lato'; font-size:16px; font-weight:400; font-color: rgb(151, 151, 151); line-height:1.625; padding-left:40px;padding-right:40px; border: none; background-color:transparent ");
+    						button.setAttribute('data-toggle', 'modal');
+    						button.setAttribute('data-target', '#myModal' + i);
+    						button.innerHTML = "READ MORE";
+
+
+    						var devModal = document.createElement('div');
+    						devModal.setAttribute('id', 'myModal' + i);
+    						devModal.setAttribute('class', 'modal fade');
+    						devModal.setAttribute('role', 'dialog');
+
+    							var modalDialog = document.createElement('div');
+    							modalDialog.setAttribute('class', 'modal-dialog modal-lg');
+
+    								var modalContent = document.createElement('div');
+    								modalContent.setAttribute('class', 'modal-content');
+
+    									var modalHeader = document.createElement('div');
+    									modalHeader.setAttribute('class', 'modal-header');
+
+    										var btnClose = document.createElement('button');
+    										btnClose.setAttribute('type', 'button');
+    										btnClose.setAttribute('class', 'close');
+    										btnClose.setAttribute('data-dismiss', 'modal');
+    										btnClose.innerHTML = '&times;';
+
+    										var h2Title = document.createElement('h2');
+    										h2Title.setAttribute('class', 'modal-title');
+    										h2Title.innerHTML = longtitle;
+
+    										modalHeader.appendChild(btnClose);
+    										modalHeader.appendChild(h2Title);
+
+    									var modalBody = document.createElement('div');
+    									modalBody.setAttribute('class', 'modal-body');
+										modalBody.setAttribute('style', 'text-align:left');
+
+											var center = document.createElement('center');
+
+												var imgBig = document.createElement('img');
+												imgBig.setAttribute('src', pictureURL);
+												imgBig.setAttribute('style', 'height:50%; width:50%; padding:0px !important');
+
+												center.appendChild(imgBig);
+
+											var bigDesc = document.createElement('p');
+											bigDesc.setAttribute('style', 'margin-top:40px; margin-left:30px');
+											bigDesc.innerHTML = longdesc;
+			
+											modalBody.appendChild(center);
+											modalBody.appendChild(bigDesc);
+
+										var modalFooter = document.createElement('div');
+										modalFooter.setAttribute('class', 'modal-footer');
+			
+											var buttonClose = document.createElement('button');
+											buttonClose.setAttribute('class', 'btn btn-default');
+											buttonClose.setAttribute('data-dismiss', 'modal');
+											buttonClose.innerHTML = 'Close';
+			
+											modalFooter.appendChild(buttonClose);
+			
+										modalContent.appendChild(modalHeader);
+										modalContent.appendChild(modalBody);
+										modalContent.appendChild(modalFooter);
+
+									modalDialog.appendChild(modalContent);
+
+								devModal.appendChild(modalDialog);
+			
+							col.appendChild(img);
+							col.appendChild(br);
+							col.appendChild(h3);
+							col.appendChild(dateP);
+							col.appendChild(shortDescP);
+							col.appendChild(button);
+							col.appendChild(devModal);
+
+						row.appendChild(col);
+
+    				}
+    			}
+			);
+		</script>
 	</body>
 
 </html>

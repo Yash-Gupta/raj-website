@@ -8,7 +8,13 @@ textarea { resize: vertical; }			/* Allow only vertical resizing of textareas. *
 h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: 400; } /* Browsers default headings to font-weight: bold. This resets it to normal. http://css-tricks.com/watch-your-font-weight/ */
 strong { font-weight: 400; } /* we are reserving "strong" as a keyword for custom styles in the Wordpress WYSIWIG, so we reset the default bolding behavior */
 code, kbd, pre, samp { font-family: 'adelle', arial, sans-serif !important; }
+.modal-backdrop {
+  z-index: 1 !important;
+}
 
+.modal{
+	z-index: 3 !important;
+}
 body { 
 	margin: 0;
 	padding: 0;

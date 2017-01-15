@@ -46,10 +46,57 @@
 				</div>
 			</div>
 		</div>
-		<div class="container" >
+		<div class="container" id='gallery-container' >
 			<div class="spacer" style="margin-top:80px"></div>
 			<div class="row" id="gallery-top" style="margin-top:175px;">
-				<div class="col-md-2"><img title="Speaking" class="img-fluid" src="img/(1).jpg" alt=""></div>
+			<script>
+				$.get("https://api.cosmicjs.com/v1/raj-website/media?folder=gallery",{},
+    					function(data) {
+    						var allPics = data['media'].length;
+
+    						for (var i = 0; i <= data['media'].length - 1; i++) {
+    							data['media'][i]
+    							if((i+1)%6 == 0){
+    								var add = '</div><br>';
+
+    								var newRow = document.createElement('div');
+    								newRow.setAttribute('class', 'row');
+    								newRow.setAttribute('id', 'gallery-top');
+
+									var newCol = document.createElement('div');
+    								newCol.setAttribute('class', 'col-md-2');
+
+    								var newImg = document.createElement('img');
+    								newImg.setAttribute('src', data['media'][i]['url']);
+    								newImg.setAttribute('class', 'img-fluid');
+    								newImg.setAttribute('id', i.toString());
+
+    								newCol.appendChild(newImg);
+    								newRow.appendChild(newCol);
+
+    								document.getElementById("gallery-container").innerHTML += add;
+    								document.getElementById("gallery-container").appendChild(newRow);
+
+    							}else{
+    								var newCol = document.createElement('div');
+    								newCol.setAttribute('class', 'col-md-2');
+
+    								var newImg = document.createElement('img');
+    								newImg.setAttribute('src', data['media'][i]['url']);
+    								newImg.setAttribute('class', 'img-fluid');
+    								newImg.setAttribute('id', i.toString());
+
+    								newCol.appendChild(newImg);
+
+    								document.getElementById("gallery-container").appendChild(newCol);
+    							}
+    							
+    						}
+    					}
+					);
+
+			</script>
+				<!--div class="col-md-2"><img title="Speaking" class="img-fluid" src="img/(1).jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/(2).jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/(3).jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/(4).jpg" alt=""></div>
@@ -97,7 +144,7 @@
 				<div class="col-md-2"><img class="img-fluid" src="img/(31).jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/(32).jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/(33).jpg" alt=""></div>
-			</div>
+			</div-->
 		</div>
 		<br><br>
 		<div tabindex="-1" class="modal fade" style="max-height:90vh;" id="myModal" role="dialog">
@@ -118,53 +165,49 @@
 		</div>
 		
 		<script>
-			$(document).ready(function() {
-				$('.img-fluid').click(function(){
+		document.querySelector('body').addEventListener('click', function(event) {
+  if (event.target.className.toLowerCase() === 'img-fluid') {
+    console.log('testing2');
 				    $('.modal-body').empty();
-				    var href = $(this).attr("src");
-				  	var title = $(this).attr("title");
+				    var href = event.target.getAttribute("src");
+				  	var title = event.target.getAttribute("title");
+				  	var id = event.target.getAttribute("id");
 				  	$('.modal-title').html(title);
 				  	var elem = document.createElement("img");
 					elem.setAttribute("src", href);
-					elem.setAttribute("id", href);
+					elem.setAttribute("id", id);
 					elem.setAttribute("class", 'imageBig');
 				  	document.getElementById("modal-body").appendChild(elem);
   					$('#myModal').modal({show:true});
-  
-				});
+  }
+});
 				
-			});
 			$(document).keydown(function(e) {
 				//alert(e.which);
 				var $items = $('.img-fluid');
   				if(e.which == 39) {
-  					var image = $('.imageBig').attr('src');
-  					var split = image.split('/(');
-  					var split2 = split[1].split(').jpg');
-  					if(!(parseInt(split2[0]) >= $items.length)){
-  						var filename = parseInt(split2[0]) + 1; 
-  					}else{
-  						var filename = parseInt(split2[0]);
-  					}
-  					var src = "img/(" + filename + ").jpg";
+  					var image = $('.imageBig').attr('id');
+ 					$.get("https://api.cosmicjs.com/v1/raj-website/media?folder=gallery",{},
+    					function(data) {
+    						var i = parseInt(image);
+    						 var nextURL = data['media'][i+1]['url'];
+    						 $('.imageBig').attr('src', nextURL);
+  							$('.imageBig').attr('id', i+1)
+    					}
+					);
 
-  					$('.imageBig').attr('src', src);
-  					$('.imageBig').attr('id', src);	
+ 
   				}
   				if(e.which == 37) {
-  					var image = $('.imageBig').attr('src');
-  					var split = image.split('/(');
-  					var split2 = split[1].split(').jpg');
-  					if(!(parseInt(split2[0]) <= 1)){
-  						var filename = parseInt(split2[0]) - 1; 
-  					}else{
-  						var filename = parseInt(split2[0]);
-  					}
-
-  					var src = "img/(" + filename + ").jpg";
-
-  					$('.imageBig').attr('src', src);
-  					$('.imageBig').attr('id', src);	
+  					var image = $('.imageBig').attr('id');
+ 					$.get("https://api.cosmicjs.com/v1/raj-website/media?folder=gallery",{},
+    					function(data) {
+    						var i = parseInt(image);
+    						 var nextURL = data['media'][i-1]['url'];
+    						 $('.imageBig').attr('src', nextURL);
+  							$('.imageBig').attr('id', i+1)
+    					}
+					);
   				}
 			});
 		</script>
