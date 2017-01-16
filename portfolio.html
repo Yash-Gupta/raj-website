@@ -19,7 +19,8 @@
 		.divider-buttons{
 			padding:0px; 
 			font-family: 'Lato'; 
-			background-color:rgba(0,0,0,0.3); 
+			background-color:rgba(0,0,0,0.7); 
+			transition: background-color 0.5s linear;
 			border: none;
 			font-size:13px; 
 			padding-left:20px; 
@@ -32,7 +33,7 @@
 		}
 
 		.divider-buttons.active, .divider-buttons:hover{
-			background-color: rgba(0,0,0,0.7);
+			background-color: rgba(41,128,185, 0.85);
 		}
 	</style>
 	</head>
@@ -398,7 +399,7 @@
 
 				<div class="fourth rAlign m2 centeredT">
 					<div class="footerBlock p3">Connect with Raj</div>
-					<a href="https://www.linkedin.com/in/rbhutoria" target="_blank" class="smIcon"><img src="linkedin.svg" alt="linkedin"></a>
+					<a href="https://www.linkedin.com/in/rbhutoria" target="_blank" class="smIcon"><img src="img/linkedin.svg" alt="linkedin"></a>
 					<a href="https://www.facebook.com/bhutoria.raj" target="_blank" class="smIcon"><img src="img/facebook1.png" alt="Facebook"></a>
 				</div>
 
@@ -432,8 +433,8 @@
 					$('#volunteerBtn').attr('class', 'divider-buttons');
 
 					$(this).attr('class', 'divider-buttons active');
-					$('#experience').fadeOut(250);
-					$('#awards').fadeOut(250);
+					$('#experience').hide();
+					$('#awards').hide();
 					$('#volunteer').hide();
 					$('#' + showDiv).show();
 					$('#' + showDiv).addClass("animated fadeInUp");
@@ -486,7 +487,11 @@
 
     					var row = document.getElementById(type);
     					var col = document.createElement('div');
-    					col.setAttribute('style', 'margin-left: 50px;margin-bottom:50px;height:450px; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center');
+    					if((i-1)%3 == 0){
+							col.setAttribute('style', 'margin-left:7.5%;margin-bottom:50px;height:450px; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center');
+    					}else{
+    						col.setAttribute('style', 'margin-left: 5%;margin-bottom:50px;height:450px; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center');
+    					}
     					col.setAttribute('class', 'col-md-3');
 
     						var img = document.createElement('img');
