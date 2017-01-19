@@ -259,6 +259,7 @@
 		    	var nextURL = media[i+1][0];
 		    	$('.imageBig').attr('src', nextURL);
 		  		$('.imageBig').attr('id', i+1)
+		  		$('.modal-title').html(media[i+1][1]);
 		  	}
 		}	
 		function lastPic(){
@@ -271,6 +272,7 @@
 		    	var nextURL = media[i-1][0];
 		    	$('.imageBig').attr('src', nextURL);
 		  		$('.imageBig').attr('id', i-1)
+		  		$('.modal-title').html(media[i-1][1]);
 		  	}
 		}
 		$(document).keydown(function(e) {
@@ -310,7 +312,9 @@
 		<script>
 		function grabAllData(){
 			console.log('grabbing all data');
+			
 			var media = JSON.parse(sessionStorage.getItem('media'));
+			console.log("NEXT NUMBER FOR GALLERY: " + (media.length+1));
     		$('#gallery-container').empty();
     		var newSpacer = document.createElement('div');
     		newSpacer.setAttribute('class', 'spacer');
@@ -324,7 +328,7 @@
     		document.getElementById("gallery-container").appendChild(newSpacer);
     		document.getElementById("gallery-container").appendChild(newDiv);
 
-    		for (var i = 0; i < media.length - 1; i++) {
+    		for (var i = 0; i < media.length; i++) {
     			if(!(media[i][0] == null)){
     			if((i+1)%6 == 0){
     				var add = '</div>';
@@ -341,7 +345,8 @@
     				newImg.setAttribute('src', media[i][0]);
     				newImg.setAttribute('class', 'img-fluid');
     				newImg.setAttribute('id', i.toString());
-    				//newImg.setAttribute('title', media[i][1]);
+    				newImg.setAttribute('title', media[i][1]);
+    				
 
     				newCol.appendChild(newImg);
     				newRow.appendChild(newCol);
@@ -357,8 +362,8 @@
     				newImg.setAttribute('src', media[i][0]);
     				newImg.setAttribute('class', 'img-fluid');
     				newImg.setAttribute('id', i.toString());
-    				//newImg.setAttribute('title', media[i][1]);
-
+    				newImg.setAttribute('title', media[i][1]);
+    				
     				newCol.appendChild(newImg);
 
     				document.getElementById("gallery-top").appendChild(newCol);
