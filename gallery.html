@@ -9,6 +9,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="other-style.css">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="animate.css">
+		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.js"></script>
 		<script src="sweetalert-master/dist/sweetalert-dev.js"></script>
@@ -22,36 +24,41 @@
 	</head>
 
 	<body>
+		<div class="" id="mobileNav" style="display:none;width:50%;height:1000px;background-color:rgba(0,0,0,0.8);position: fixed;z-index:4567;">
+			
+			<div id="cross" style="margin-right:0px;padding:10px 20px;font-size:50px;color:white;">
+				&#735;
+			</div>
+			<a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:0px;display: block;color:white;text-decoration: none;"  href="index.html">Home</a>
+			<a class="" style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="about.html">About</a>
+			<a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="gallery.html">Gallery</a>
+			<a class="" style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="portfolio.html">Portfolio</a>
+			<a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="contact.html">Contact</a>
+		</div>
 		<div  id="navbar" class="header full">
-
-			<div class="contentWrapper-pages">
-				<div class="full colFullT">
-
 			<div id="threebar" style="margin-right:0px;padding:10px 20px;color:white;">
 				☰
 			</div>
-			<div id="cross" style="margin-right:0px;padding:10px 20px;color:white;display:none">
-				&#735;
-			</div>
-			<h1 class="pageTitle" style="display: none;font-family: 'Century Gothic'"> </h1>
-
+			<div class="contentWrapper">
+				<div class="full colFullT">
 					<div class="colThirdT colHalfP headerSpacer">
-						<h1 style="font-family:'Open Sans';letter-spacing: 5px;font-size:30px; color:white;margin-top:20px;"><b>RAJ BHUTORIA</b></h1>		
+						<h1 style="font-family:'Open Sans';letter-spacing: 5px;font-size:30px; color:white;margin-top:20px;"><b>RAJ BHUTORIA</b></h1>	
 					</div>
 						
 					<div class="twoThirdsT halfP">
-						<a class="navItem home" href="contact.html">Contact</a>
+						<a class="navItem home " href="contact.html">Contact</a>
 						<a class="navItem home" href="portfolio.html">Portfolio</a>
-						<a class="navItem home active" href="gallery.html">Gallery</a>
+						<a class="navItem home " href="gallery.html">Gallery</a>
 						<a class="navItem home" href="about.html">About</a>
-						<a class="navItem home " href="index.html">Home</a>
+						<a class="navItem home "  href="index.html">Home</a>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div id="extra-nav" style="width: 100%;height: 70px;background: #27BDED url(img/menuBG.jpg) no-repeat center center;"></div>
 		<div class="container" id='gallery-container' >
 			<div class="spacer" style="margin-top:80px"></div>
-			<div class="row" id="gallery-top" style="margin-top:175px;">
+			<div class="row" id="gallery-top" style="margin-top:150px;">
 			
 				<div class="col-md-2"><img title="Speaking" class="img-fluid" src="img/(1).jpg" alt=""></div>
 				<div class="col-md-2"><img class="img-fluid" src="img/(2).jpg" alt=""></div>
@@ -166,7 +173,7 @@
 			</div>
 		</div>
 	</div>
-		<script>
+		<!--script>
 				$.get("https://api.cosmicjs.com/v1/raj-website/media?folder=gallery",{},
     					function(data) {
     						var allPics = data['media'].length;
@@ -225,98 +232,147 @@
     					}
 					);
 
-			</script>
+			</script-->
 		<script>
 		document.querySelector('body').addEventListener('click', function(event) {
-  if (event.target.className.toLowerCase() === 'img-fluid') {
-    console.log('testing2');
-				    $('#modal-pic').empty();
+  			if(event.target.className.toLowerCase() === 'img-fluid') {
+				$('#modal-pic').empty();
 
-				    var href = event.target.getAttribute("src");
-				  	var title = event.target.getAttribute("title");
-				  	var id = event.target.getAttribute("id");
-				  	$('.modal-title').html(title);
-				  	var elem = document.createElement("img");
-					elem.setAttribute("src", href);
-					elem.setAttribute("id", id);
-					elem.setAttribute("class", 'imageBig');
-				  	document.getElementById("modal-pic").appendChild(elem);
-  					$('#myModal').modal({show:true});
-  }
-});
-function nextPic() {
-var $items = $('.img-fluid');
-  					var image = $('.imageBig').attr('id');
- 					$.get("https://api.cosmicjs.com/v1/raj-website/media?folder=gallery",{},
-    					function(data) {
-    						var i = parseInt(image);
-    						 var nextURL = data['media'][i+1]['url'];
-    						 $('.imageBig').attr('src', nextURL);
-  							$('.imageBig').attr('id', i+1)
-    					}
-					);
+				var href = event.target.getAttribute("src");
+				var title = event.target.getAttribute("title");
+				var id = event.target.getAttribute("id");
+				$('.modal-title').html(title);
+				var elem = document.createElement("img");
+				elem.setAttribute("src", href);
+				elem.setAttribute("id", id);
+				elem.setAttribute("class", 'imageBig');
+				document.getElementById("modal-pic").appendChild(elem);
+  				$('#myModal').modal({show:true});
+  			}
+		});
+		function nextPic() {
+			var media = JSON.parse(sessionStorage.getItem('media'));
+			var $items = $('.img-fluid');
+		  	var image = $('.imageBig').attr('id');
+		    var i = parseInt(image);
+		    if(i+1<=media.length){
+		    	var nextURL = media[i+1][0];
+		    	$('.imageBig').attr('src', nextURL);
+		  		$('.imageBig').attr('id', i+1)
+		  	}
+		}	
+		function lastPic(){
+			var media = JSON.parse(sessionStorage.getItem('media'));
+			var $items = $('.img-fluid');
+		  	var image = $('.imageBig').attr('id');
+		    var i = parseInt(image);
+		
+		    if(i-1>=0){
+		    	var nextURL = media[i-1][0];
+		    	$('.imageBig').attr('src', nextURL);
+		  		$('.imageBig').attr('id', i-1)
+		  	}
+		}
+		$(document).keydown(function(e) {
+			var $items = $('.img-fluid');
+  			if(e.which == 39) {
+				nextPic();
 
-	}	
-	function lastPic(){
-var $items = $('.img-fluid');
-  					var image = $('.imageBig').attr('id');
- 					$.get("https://api.cosmicjs.com/v1/raj-website/media?folder=gallery",{},
-    					function(data) {
-    						var i = parseInt(image);
-    						 var nextURL = data['media'][i-1]['url'];
-    						 $('.imageBig').attr('src', nextURL);
-  							$('.imageBig').attr('id', i-1)
-    					}
-					);
-	}
-			$(document).keydown(function(e) {
-				//alert(e.which);
-				var $items = $('.img-fluid');
-  				if(e.which == 39) {
-  					var image = $('.imageBig').attr('id');
- 					$.get("https://api.cosmicjs.com/v1/raj-website/media?folder=gallery",{},
-    					function(data) {
-    						var i = parseInt(image);
-    						 var nextURL = data['media'][i+1]['url'];
-    						 $('.imageBig').attr('src', nextURL);
-  							$('.imageBig').attr('id', i+1)
-    					}
-					);
+  			}
+  			if(e.which == 37) {
+  				lastPic();
+  			}
+		});
 
- 
-  				}
-  				if(e.which == 37) {
-  					var image = $('.imageBig').attr('id');
- 					$.get("https://api.cosmicjs.com/v1/raj-website/media?folder=gallery",{},
-    					function(data) {
-    						var i = parseInt(image);
-    						 var nextURL = data['media'][i-1]['url'];
-    						 $('.imageBig').attr('src', nextURL);
-  							$('.imageBig').attr('id', i-1)
-    					}
-					);
-  				}
-			});
+
 		</script>
+		
 		<script type="text/javascript">
-$(window).resize(larg);
+		$(window).resize(larg);
+		
+		function larg(){
+		 	if (document.documentElement.clientWidth < 835) {
+				console.log("mobile"); 
+				$('.twoThirdsT').hide();
+				$( "body" ).append( "<script src='navbar.js'><\/script>" ); 
+		 	}else{
+		 		$('.twoThirdsT').show();
+		 	}
+		}
+		if (document.documentElement.clientWidth < 835) {
+			console.log("mobile"); 
+			$('.twoThirdsT').hide();
+		    document.write("<script src='navbar.js'><\/script>");  
+		} 
+		
+		</script>
 
- function larg(){
- 	if (document.documentElement.clientWidth < 835) {
-		console.log("mobile"); 
-		$('.twoThirdsT').hide();
-		$( "body" ).append( "<script src='navbar.js'><\/script>" ); 
- 	}else{
- 		$('.twoThirdsT').show();
+		<script>
+		function grabAllData(){
+			console.log('grabbing all data');
+			var media = JSON.parse(sessionStorage.getItem('media'));
+    		$('#gallery-container').empty();
+    		var newSpacer = document.createElement('div');
+    		newSpacer.setAttribute('class', 'spacer');
+    		newSpacer.setAttribute('style', 'margin-top:80px');
+
+    		var newDiv = document.createElement('div');
+    		newDiv.setAttribute('id', 'gallery-top');
+    		newDiv.setAttribute('class', 'row');
+    		newDiv.setAttribute('style', 'margin-top:150px');
+
+    		document.getElementById("gallery-container").appendChild(newSpacer);
+    		document.getElementById("gallery-container").appendChild(newDiv);
+
+    		for (var i = 0; i < media.length - 1; i++) {
+    			if(!(media[i][0] == null)){
+    			if((i+1)%6 == 0){
+    				var add = '</div>';
+
+    				var newRow = document.createElement('div');
+    				newRow.setAttribute('class', 'row');
+    				newRow.setAttribute('style', 'margin-bottom: 20px;');
+    				newRow.setAttribute('id', 'gallery-top');
+
+					var newCol = document.createElement('div');
+    				newCol.setAttribute('class', 'col-md-2');
+
+    				var newImg = document.createElement('img');
+    				newImg.setAttribute('src', media[i][0]);
+    				newImg.setAttribute('class', 'img-fluid');
+    				newImg.setAttribute('id', i.toString());
+    				//newImg.setAttribute('title', media[i][1]);
+
+    				newCol.appendChild(newImg);
+    				newRow.appendChild(newCol);
+
+    				//document.getElementById("gallery-top").innerHTML += add;
+    				document.getElementById("gallery-top").appendChild(newRow);
+
+    			}else{
+    				var newCol = document.createElement('div');
+    				newCol.setAttribute('class', 'col-md-2');
+
+    				var newImg = document.createElement('img');
+    				newImg.setAttribute('src', media[i][0]);
+    				newImg.setAttribute('class', 'img-fluid');
+    				newImg.setAttribute('id', i.toString());
+    				//newImg.setAttribute('title', media[i][1]);
+
+    				newCol.appendChild(newImg);
+
+    				document.getElementById("gallery-top").appendChild(newCol);
+    			}
+    		}
+    							
+    	}
+
  	}
- }
-if (document.documentElement.clientWidth < 835) {
-	console.log("mobile"); 
-	$('.twoThirdsT').hide();
-    document.write("<script src='navbar.js'><\/script>");  
- } 
+		
+	</script>
 
-</script>
+	<script src="cosmic.js"></script>
+
+	
 	</body>
-
 </html>

@@ -1,29 +1,19 @@
-$('#cross').hide();
-$('.twoThirdsT').hide();
+
 $( "#threebar" ).click(function() {
-$('.colFullT').css({
-	'background-color': 'rgba(0,0,0,0.8)',
-	'width': '50%'
-});
-$('.pageTitle').hide();
-$( ".twoThirdsT" ).slideToggle( "fast", function() {
-	$('body').css('position', 'fixed');
-	
-	$('#threebar').hide();
-	$('#cross').show();
-});
+	console.log("three bar");
+	$('#navbar').hide();
+	$('#mobileNav').addClass("animated slideInLeft");
+	$('#mobileNav').show();
 });
 
 $( "#cross" ).click(function() {
-	$('.colFullT').css({
-		'background-color': 'rgba(0,0,0,0.0)',
-		'width': '100%'
-	});
-	$('.pageTitle').show();
-$( ".twoThirdsT" ).slideToggle( "fast", function() {
-	$('body').css('position', 'relative');
-	$('.colFullT').css('background-color', 'rgba(0,0,0,0)');
-	$('#threebar').show();
-	$('#cross').hide();
-});
+	console.log("cross");
+	$('#navbar').show();
+	$('#navbar').addClass("animated fadeInLeft");
+	//$('#mobileNav').addClass("animated slideOutLeft");
+	//$('#mobileNav').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+		console.log('hiding');
+		$('#mobileNav').hide();
+	//});
+
 });

@@ -49,6 +49,9 @@ h3{
 .header {
     background: #27BDED url(img/menuBG.jpg) no-repeat center center;
 }
+ #extra-nav{
+        display:none;
+    }
 
 .img-fluid{
     cursor: pointer;
@@ -154,7 +157,7 @@ p{
 
 
 
-/* MOBILE CSS */
+/* MOBILE CSS 
 @media (max-width: 835px){
     
 #threebar{
@@ -245,7 +248,7 @@ a.navItem{
 }
 
 .colFullT{
-    /*background-color:rgba(0,0,0,0.8);*/
+    background-color:rgba(0,0,0,0.8);
     margin: 0;
     height:100vh;
     width: 100%;
@@ -305,11 +308,10 @@ a.navItem{
 #navbar{
     background: transparent !important;
 }
-/*
     header {
         width: 100%;
     }
-*/
+
 
 #gallery-top{
     margin-top: 0px !important;
@@ -368,3 +370,140 @@ a.navItem{
 
 }
 
+
+*/
+
+/* MOBILE CSS*/
+
+@media only screen and (max-device-width: 480px) {
+    #threebar{
+        width:10%;
+        display: block;
+        background:transparent;
+        font-size:250%;
+        text-align: center;
+    }
+
+    .hiya{
+        background-position: center; 
+    }
+
+    #startchange{
+        font-size:30px;
+        margin-top: 100px;
+    }
+
+    #heading{
+        width: 100%;
+    }
+    #heading-border{
+        width:50% !important;
+    }
+    #portDesc{padding:0px !important;}
+    #shortdesc{padding:20px !important;}
+    #socMedLinks{margin:0 !important;display:inline-block;}
+    #portVid{
+        display:block;
+        position:relative;
+        margin-top:200px;
+        height:220px !important;
+    }
+
+    /* ABOUT */
+    #aboutPic{
+        display:none;
+    }
+    #aboutContainer{
+        margin-top:0px !important;
+    }
+    #aboutText{
+        padding-top:20px;
+        height:450px;
+    }
+    #aboutText>center>p{
+        margin-top:15px !important;
+    }
+    #aboutText>p{
+        padding:0px 20px !important;
+    }
+
+    #galleryCont>center>div>.col-md-3{
+        width: 100%;
+        height:200px;
+        margin-bottom: 50px;
+        display:block;
+        position:relative;
+        margin-left:0px !important;
+
+    }
+
+    #raj-heading{
+        display:none;
+    }
+
+    #aboutpara{
+        column-count: 1 !important;
+    }
+
+    #extra-nav{
+        display:initial;
+    }
+
+    #about-shortdesc{
+        font-size:30px;
+    }
+
+    #aboutpicture{
+        width: 75%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #aboutrow{
+        margin-top: 100px !important;
+    }
+    #aboutrow>.col-md-3{
+        text-align: center;
+    }
+
+    .contentWrapper{
+        display: none;
+    }
+
+    #gallery-top{
+        margin-top: 20px !important;
+    }
+
+    .img-fluid{
+        margin-bottom: 10px;
+    }
+
+    #gallery-top>.col-md-2{
+        text-align: center;
+    }
+
+    #modal-pic>.col-md-1{width: 10%;}
+
+    .col-md-10{
+        width:100% !important;
+        display:inline-block;
+    }
+    .svg{
+        display:none;
+    }
+    .modal-footer>p{
+        display:none;
+    }
+
+    .divider-buttons{
+        margin-bottom: 20px;
+    }
+
+    #portfolioCont>.row>.col-md-3{
+        width: 90%;
+        margin-left: 5% !important;
+    }
+
+
+
+}

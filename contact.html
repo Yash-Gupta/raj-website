@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="other-style.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="animate.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.js"></script>
         <!-- Latest compiled and minified CSS -->
@@ -44,7 +45,20 @@
             font-size: 20px;
             font-weight: 300;
         }
+@media only screen and (max-device-width: 480px) {
+            .container{
+                margin-bottom: 0px !important;
+            }
 
+            .col-md-5>form{
+                padding:20px;
+            }
+            .icons{
+                margin-left:15% !important;
+            }
+            
+
+        }
         input {
             border-radius: 0 !important;
             background-color: #EEEEEE !important;
@@ -109,55 +123,49 @@
         </style>
     </head>
     <body>
+        <div class="" id="mobileNav" style="display:none;width:50%;height:1000px;background-color:rgba(0,0,0,0.8);position: fixed;z-index:4567;">
+            
+            <div id="cross" style="margin-right:0px;padding:10px 20px;font-size:50px;color:white;">
+                &#735;
+            </div>
+            <a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:0px;display: block;color:white;text-decoration: none;"  href="index.html">Home</a>
+            <a class="" style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="about.html">About</a>
+            <a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="gallery.html">Gallery</a>
+            <a class="" style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="portfolio.html">Portfolio</a>
+            <a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="contact.html">Contact</a>
+        </div>
         <div  id="navbar" class="header full">
-
-            <div class="contentWrapper-pages">
-                <div class="full colFullT">
-
             <div id="threebar" style="margin-right:0px;padding:10px 20px;color:white;">
                 ☰
             </div>
-            <div id="cross" style="margin-right:0px;padding:10px 20px;color:white;display:none">
-                &#735;
-            </div>
-            <h1 class="pageTitle" style="display: none;font-family: 'Century Gothic'"> </h1>
-
+            <div class="contentWrapper">
+                <div class="full colFullT">
                     <div class="colThirdT colHalfP headerSpacer">
-                        <h1 style="font-family:'Open Sans';letter-spacing: 5px;font-size:30px; color:white;margin-top:20px;"><b>RAJ BHUTORIA</b></h1>       
+                        <h1 style="font-family:'Open Sans';letter-spacing: 5px;font-size:30px; color:white;margin-top:20px;"><b>RAJ BHUTORIA</b></h1>    
                     </div>
                         
                     <div class="twoThirdsT halfP">
-                        <a class="navItem home active" href="contact.html">Contact</a>
+                        <a class="navItem home " href="contact.html">Contact</a>
                         <a class="navItem home" href="portfolio.html">Portfolio</a>
                         <a class="navItem home " href="gallery.html">Gallery</a>
                         <a class="navItem home" href="about.html">About</a>
-                        <a class="navItem home " href="index.html">Home</a>
+                        <a class="navItem home "  href="index.html">Home</a>
                     </div>
                 </div>
             </div>
         </div>
-
-                
+        <div id="extra-nav" style="width: 100%;height: 70px;background: #27BDED url(img/menuBG.jpg) no-repeat center center;"></div>
         </center>
         <div class = "row" id="contactRow">
         <div class="spacer" style="margin-top:80px"></div>
 
-            <div class = "container">
+            <div class = "container" style="margin-bottom:50px;">
                 
             
 
             </div>
         
         
-       <br>
-         
-            <br>
-             <br>
-         
-            <br>
-             <br>
-         
-            <br>
             <div class="col-md-1" >
                 
             </div>

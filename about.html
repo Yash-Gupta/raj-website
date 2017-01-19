@@ -10,6 +10,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="other-style.css">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="animate.css">
+
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.js"></script>
 		<script src="sweetalert-master/dist/sweetalert-dev.js"></script>
@@ -28,42 +30,49 @@
 	</head>
 
 	<body>
-			<div  id="navbar" class="header full">
-
-			<div class="contentWrapper-pages">
-				<div class="full colFullT">
-
+			<div class="" id="mobileNav" style="display:none;width:50%;height:1000px;background-color:rgba(0,0,0,0.8);position: fixed;z-index:4567;">
+			
+			<div id="cross" style="margin-right:0px;padding:10px 20px;font-size:50px;color:white;">
+				&#735;
+			</div>
+			<a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:0px;display: block;color:white;text-decoration: none;"  href="index.html">Home</a>
+			<a class="" style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="about.html">About</a>
+			<a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="gallery.html">Gallery</a>
+			<a class="" style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="portfolio.html">Portfolio</a>
+			<a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="contact.html">Contact</a>
+		</div>
+		<div  id="navbar" class="header full">
 			<div id="threebar" style="margin-right:0px;padding:10px 20px;color:white;">
 				☰
 			</div>
-			<div id="cross" style="margin-right:0px;padding:10px 20px;color:white;display:none">
-				&#735;
-			</div>
-			<h1 class="pageTitle" style="display: none;font-family: 'Century Gothic'"> </h1>
-
+			<div class="contentWrapper">
+				<div class="full colFullT">
 					<div class="colThirdT colHalfP headerSpacer">
 						<h1 style="font-family:'Open Sans';letter-spacing: 5px;font-size:30px; color:white;margin-top:20px;"><b>RAJ BHUTORIA</b></h1>		
 					</div>
 						
 					<div class="twoThirdsT halfP">
-						<a class="navItem home" href="contact.html">Contact</a>
+						<a class="navItem home " href="contact.html">Contact</a>
 						<a class="navItem home" href="portfolio.html">Portfolio</a>
 						<a class="navItem home " href="gallery.html">Gallery</a>
-						<a class="navItem home active" href="about.html">About</a>
-						<a class="navItem home " href="index.html">Home</a>
+						<a class="navItem home" href="about.html">About</a>
+						<a class="navItem home "  href="index.html">Home</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<div id="extra-nav" style="width: 100%;height: 70px;background: #27BDED url(img/menuBG.jpg) no-repeat center center;"></div>
+
+
 		<div class="container">
-			<div class="row" id="aboutrow" style="margin-top:175px;">
+			<div class="row" id="aboutrow" style="margin-top:125px;">
 				<div class="col-md-3">
-					<img id="aboutpicture" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAPQAAAAJDQ1ZGI3YWQ5LTA3YjYtNDhkMi1iNzhiLTMzMDYzZDk3YmU4NA.jpg" alt="" style="border-radius:50%;">
+					<img id="aboutpicture" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAPQAAAAJDQ1ZGI3YWQ5LTA3YjYtNDhkMi1iNzhiLTMzMDYzZDk3YmU4NA.jpg" alt="" style="border-radius:50%;" width="100%">
 				</div>
 				<div class="col-md-9">
 				
-				<h1 id="shortdesc">Raj Bhutoria's description would be inserted here, but it should be like this long.</h1>
+				<h1 id="about-shortdesc">Raj Bhutoria's description would be inserted here, but it should be like this long.</h1>
 				<br>
 				 <p id="aboutpara" style="column-count: 2;column-gap: 80px;">
 				 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla enim justo, pulvinar sed consectetur euismod, interdum sed leo. Vivamus venenatis tortor at tellus iaculis, ac suscipit justo ornare. Nulla at porta tortor. Nullam id vestibulum tortor, in egestas tortor. Nulla ut rhoncus velit. Pellentesque viverra rhoncus nisi at malesuada. Donec eu auctor neque. Cras condimentum urna ullamcorper turpis cursus malesuada. Sed rutrum libero felis, vel vulputate dolor interdum at. Donec non diam vel nulla porttitor hendrerit. Proin finibus enim mollis erat rutrum finibus. Quisque nec leo vulputate, luctus ex at, suscipit mi. Sed eu viverra tellus. Sed porta diam non enim convallis, a vulputate ligula cursus. Cras tincidunt efficitur ipsum, vitae convallis elit consequat eget.
@@ -71,7 +80,6 @@
 				</div>
 			</div>
 		</div>
-
 				<script type="text/javascript">
 $(window).resize(larg);
 
@@ -90,21 +98,8 @@ if (document.documentElement.clientWidth < 835) {
     document.write("<script src='navbar.js'><\/script>");  
  } 
 
-$.get(
-    "https://api.cosmicjs.com/v1/raj-website/object/about",
-    {},
-    function(data) {
-    	var aboutDesc = data['object']['metadata']['description'];
-    	var aboutImg = data['object']['metadata']['aboutpicture']['url'];
-
-    	document.getElementById('aboutpicture').setAttribute('src', aboutImg);
-    	document.getElementById("shortdesc").innerHTML = data['object']['metadata']['shortdesc'];
-    	document.getElementById("aboutpara").innerHTML = data['object']['metadata']['description'];
-
-    }
-);
-
 </script>
+
 <div class="footer cf" style = "background-color:#424242;" id = "footerRaj">
 		<div class="contentWrapper">
 			<div class="colFull p2_alt">
@@ -131,6 +126,20 @@ $.get(
 			</div>
 		</div>
 	</div>
+	<script>
+	function grabAllData(){
+
+    	console.log("made it");
+ 		var aboutCosmic = JSON.parse(sessionStorage.getItem('about'));
+    	document.getElementById('aboutpicture').setAttribute('src', aboutCosmic[2]);
+    	document.getElementById("about-shortdesc").innerHTML =  aboutCosmic[1];
+    	document.getElementById("aboutpara").innerHTML =  aboutCosmic[0];
+    // here you can use anything you defined in the loaded script
+
+ 	}
+		
+	</script>
+	<script src="cosmic.js"></script>
 	</body>
 
 </html>
