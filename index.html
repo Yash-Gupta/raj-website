@@ -115,7 +115,7 @@
 		</div>
 
 		
-			<div class="row hiya" >
+			<div class="row hiya" id="coverpicture" >
 				<center> <h1 id="startchange"  class = "bounce"><b id="heading">HI, I'M RAJ BHUTORIA</b></h1> 
 				<p id="shortdesc" class = "bounce" style="padding: 0px 25% ;">I'm a student at Mission San Jose High School, heavily interested in certain subjects and topics. This is a placeholder. </p></center>
 			</div>
@@ -371,6 +371,8 @@ function grabAllData() {
 	var gallerypic2 =  data[4];
 	var gallerypic3 = data[5];
 	var abouttitle =  data[6];
+	var coverpicture =  data[7];
+	var aboutpicture =  data[8];
 
 	document.getElementById('heading').innerHTML = heading;
 	document.getElementById('shortdesc').innerHTML = shortdesc;
@@ -378,6 +380,9 @@ function grabAllData() {
 	$('#gallerypic1').css({'background-image': 'url(\''+ gallerypic1 +'\')'});
 	$('#gallerypic2').css({'background-image': 'url(\''+ gallerypic2 +'\')'});
 	$('#gallerypic3').css({'background-image': 'url(\''+ gallerypic3 +'\')'});
+
+	$('#coverpicture').css({'background-image': 'url(\''+ coverpicture +'\')'})
+	$('.darken').css({'background-image': 'url(\''+ aboutpicture +'\')'})
 	document.getElementById('abouttitle').innerHTML = abouttitle;
 
 }

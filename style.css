@@ -127,8 +127,9 @@ h3{
 .hiya{
     height:90vh;
     padding-top: 18%;
-    background: url(img/cover.png) no-repeat;
+   /* background: url(img/cover.png) no-repeat;*/
     background-size: cover;
+    background-position: center;
     color:white;
 }
 
