@@ -53,9 +53,10 @@ $.get("https://api.cosmicjs.com/v1/raj-website",{},
 				var abouttitle = data['bucket']['objects'][i]['metadata']['abouttitle'];
 				var coverpicture = data['bucket']['objects'][i]['metadata']['coverpicture']['url'];
 				var aboutpicture = data['bucket']['objects'][i]['metadata']['aboutpicture']['url'];
+				var resumelink = data['bucket']['objects'][i]['metadata']['resume']['url'];
 
 
-				var homeJSON = [heading, shortdesc, gallerytitle, gallerypic1, gallerypic2, gallerypic3, abouttitle, coverpicture, aboutpicture];
+				var homeJSON = [heading, shortdesc, gallerytitle, gallerypic1, gallerypic2, gallerypic3, abouttitle, coverpicture, aboutpicture, resumelink];
 				sessionStorage.setItem('home', JSON.stringify(homeJSON));
 				//format for home
 				//home = [heading, shortdesc, gallerytitle, gallerypic1, gallerypic2, gallerypic3, abouttitle]
