@@ -14,8 +14,8 @@ $.get("https://api.cosmicjs.com/v1/raj-website",{},
 
 				for(var j = 0; j < numOfCaptions; j++){
 					mediaJSON[j] = [];
-					mediaJSON[j][1] = data['bucket']['objects'][i]['metafields'][j]['value'];
-					mediaJSON[j][2] = data['bucket']['objects'][i]['metafields'][j]['key'];
+					mediaJSON[j][0] = data['bucket']['objects'][i]['metafields'][j]['url'];
+					mediaJSON[j][1] = data['bucket']['objects'][i]['metafields'][j]['title'];
 
 					//media = [['url', 'caption'], ['url', 'caption']]
 					//GETS VALUE OF EACH CAPTION
@@ -69,30 +69,6 @@ $.get("https://api.cosmicjs.com/v1/raj-website",{},
 				sessionStorage.setItem('about', JSON.stringify(aboutJSON));
 			}
 		}//end of for loop going through all objects
-
-		
-		//going through all media
-		for (var i = 0; i < data['bucket']['media'].length; i++) {
-			var imgUrl = data['bucket']['media'][i]['url'];
-			var imgOrigName = data['bucket']['media'][i]['original_name'];
-			imgOrigName = imgOrigName.replace(/(\).jpg)/g, "");
-			var imgNum = imgOrigName.replace(/(\()/g, "");
-
-			for(k = 0; k < mediaJSON.length; k++){
-				if(mediaJSON[k][2] == imgNum){
-					mediaJSON[k][0] = imgUrl;
-				}
-			}
-			
-			//MEDIA STORAGE
-
-			/*
-				INPUT: mediaJSON = [['', 'Caption #1', '36'],[]]
-				USE: 36, URL 
-		
-			*/
-			//media = [['url', 'caption'], ['url', 'caption']]
-		}
 		sessionStorage.setItem('media', JSON.stringify(mediaJSON));
 		sessionStorage.setItem('portfolio', JSON.stringify(portfolioJSON));
 		grabAllData();
