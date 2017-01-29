@@ -313,7 +313,9 @@
 		<script>
 		function grabAllData(){
 			console.log('grabbing all data');
+			
 			var media = JSON.parse(sessionStorage.getItem('media'));
+			console.log("NEXT NUMBER FOR GALLERY: " + (media.length+1));
     		$('#gallery-container').empty();
     		var newSpacer = document.createElement('div');
     		newSpacer.setAttribute('class', 'spacer');
@@ -361,7 +363,6 @@
     				newImg.setAttribute('class', 'img-fluid');
     				newImg.setAttribute('id', i.toString());
     				newImg.setAttribute('title', media[i][1]);
-
     				newCol.appendChild(newImg);
 
     				document.getElementById("gallery-top").appendChild(newCol);
