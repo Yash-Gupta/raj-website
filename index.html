@@ -1,433 +1,1 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
-
-		<title>Raj Bhutoria - Home</title>
-		<script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="other-style.css">
-		<link rel="stylesheet" href="animate.css">
-
-		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.js"></script>
-		<script src="sweetalert-master/dist/sweetalert-dev.js"></script>
-  		<link rel="stylesheet" href="sweetalert-master/dist/sweetalert.css">
-  		<link rel="stylesheet" href="w3.css">
-  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-		<style type="text/css">
-		
-		@import url('https://fonts.googleapis.com/css?family=Nunito:200,300');
-
-
-
-
-			.home:hover{
-				background: rgba(0,0,0,0.3) !important;
-			}
-			.active {
-				background: rgba(0,0,0,0.3) !important;
-			}
-			#navbar{
-				position:fixed;
-				width: 100%;
-				background: transparent;
-				opacity: 1;
-				z-index: 1000000;
-			}
-			.fancy {
-  line-height: 0.5;
-  text-align: center;
-}
-.fancy span {
-  display: inline-block;
-  position: relative;  
-}
-.fancy span:before,
-.fancy span:after {
-  content: "";
-  position: absolute;
-  height: 5px;
-  border-bottom: 2px solid #27BDED;
-  
-  top: 0;
-  width: 100%;
-}
-.fancy span:before {
-  right: 100%;
-  margin-right: 15px;
-}
-.fancy span:after {
-  left: 100%;
-  margin-left: 15px;
-}
-
-.darken {
-  background-image: url("img/cover.png");
-    height:50%;
-    width: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-.gallery-img{
-	height:300px;
-	background-size: cover;
-}
-		</style>
-
-	</head>
-
-	<body>
-
-		<div class="" id="mobileNav" style="display:none;width:50%;height:1000px;background-color:rgba(0,0,0,0.8);position: fixed;z-index:4567;">
-			
-			<div id="cross" style="margin-right:0px;padding:10px 20px;font-size:50px;color:white;">
-				&#735;
-			</div>
-			<a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:0px;display: block;color:white;text-decoration: none;"  href="index.html">Home</a>
-			<a class="" style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="about.html">About</a>
-			<a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="gallery.html">Gallery</a>
-			<a class="" style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="portfolio.html">Portfolio</a>
-			<a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="contact.html">Contact</a>
-		</div>
-		<div  id="navbar" class="header full">
-			<div id="threebar" style="margin-right:0px;padding:10px 20px;color:white;">
-				☰
-			</div>
-			<div class="contentWrapper">
-				<div class="full colFullT">
-					<div class="colThirdT colHalfP headerSpacer">
-						<h1 style="color:white;margin-top:20px;font-family: 'Open Sans';"></h1>	
-					</div>
-						
-					<div class="twoThirdsT halfP">
-						<a class="navItem home " href="contact.html">Contact</a>
-						<a class="navItem home" href="portfolio.html">Portfolio</a>
-						<a class="navItem home " href="gallery.html">Gallery</a>
-						<a class="navItem home" href="about.html">About</a>
-						<a class="navItem home "  href="index.html">Home <hr style="margin:0px;border-width: 2px;border-color: white;opacity: 1;"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		
-			<div class="row hiya" id="coverpicture" >
-				<center> <h1 id="startchange"  class = "bounce"><b id="heading">HI, I'M RAJ BHUTORIA</b></h1> 
-				<p id="shortdesc" class = "bounce" style="padding: 0px 25% ;">I'm a student at Mission San Jose High School, heavily interested in certain subjects and topics. This is a placeholder. </p></center>
-			</div>
-			<!--<div class="row worked-w" >
-				<center> <h1 style="font-family: 'Raleway'; font-size: 30px;">I'VE WORKED WITH...</h1> 
-				<br><br>
-				<div class="col-md-1">
-				</div>
-				<div class="col-md-2" style="height: 200px;">
-					<img src="img/honda.jpg"  style="height:50%; margin-bottom: 20px;">
-					<p style="height: 50%;">Mike Honda</p>
-				</div>
-				<div class="col-md-2" style="height: 200px;">
-					<img  src="img/khanna.jpg" style="height:50%; margin-bottom: 20px;">
-					<p style="height: 50%;">Ro Khanna</p>
-				</div>
-				<div class="col-md-2" style="height: 200px;">
-					<img src="img/bobguy.jpg"  style="height:50%; margin-bottom: 20px;border-radius: 50%;" >
-					<p style="height: 50%;">Bob Wieckowski</p>
-				</div>
-				<div class="col-md-2" style="height: 200px;">
-					<img src="img/radio zindagi.jpg" style="height:50%; margin-bottom: 20px;" style="">
-					<p style="height: 50%;"> Radio Zindagi</p>
-				</div> 
-				<div class="col-md-2" style="height: 200px;">
-					<img src="img/happydayo.png" style="height:50%; margin-bottom: 20px;"  style="">
-					<p style="height: 50%;">Happy Day MicroFunds</p>
-				</div>
-				<div class="col-md-1">
-				</div> 
-				</center>
-
-				
-			</div>-->
-			<div class="row" style="background-color:rgba(41,128,185,1);color:white;padding: 20px 0px;">
-				<div class="col-md-6" style="padding-left:40px;border-right: 3px solid rgba(255,255,255, 0.2);">
-
-					<div class="row">
-						<div class="col-md-3" style="margin-top: 30px;padding: 0px;">
-							<img src="https://pbs.twimg.com/profile_images/794604460500627456/3D-CzmeN_reasonably_small.jpg" style="width:100%;border-radius:50%;display:inline-block;float:right;margin-bottom: 10px;">
-							<p style = "line-height:22px;width:100%;margin-top:10px;text-align:center;"><b>Hillary Clinton</b><br><i style="font-size:16px;">Secretary of State</i></p>
-						</div>
-						<div class="col-md-9">
-							<div style = "text-align:left;padding:25px;padding-right:0px;padding-bottom: 5px">
-								<img src="https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/75-32.png" style = "color:red;opacity:0.2; "><br>
-								<blockquote class="bq3" style ="margin-left:20px;margin-bottom:0px;border-color:transparent;">
-      							<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.</i></p></blockquote>
-      						</div>	
-						</div>
-					</div>
-      			</div>
-				<div class="col-md-6"  style="padding-left:40px;">
-
-					<div class="row">
-						<div class="col-md-3" style="margin-top: 30px;padding: 0px;">
-							<img src="https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX.jpg" style="width:100%;border-radius:50%;display:inline-block;float:right;margin-bottom: 10px;">
-							<p style = "line-height:22px;width:100%;margin-top:10px;text-align:center;"><b>Barack Obama</b><br><i style="font-size:16px;">Former President of the United States</i></p>
-						</div>
-						<div class="col-md-9">
-							<div style = "padding:25px;padding-right:0px;padding-bottom: 5px">
-								<img src="https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/75-32.png" style = "color:red;opacity:0.2; "><br>
-								<blockquote class="bq3" style ="margin-left:20px;margin-bottom:0px;border-color:transparent;">
-      							<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.</i></p></blockquote>
-      						</div>	
-						</div>
-					</div>
-      			</div>
-      			
-				
-			</div>
-			<hr style = "margin-top:0px;color:black;border-width:3px;opacity:1">
-			<div class = "row" style = ''>
-				
-				<div class = 'col-md-6' style = "background-color:#fff;height:500px;padding:50px;padding-top:0px;" >
-					<center>
-					<p  id="heading" class = "w3-animate-opacity" id="" style = "color:black; font-family:'proxima-nova'; margin-top:50px; font-size:30px;;width:60%;">PORTFOLIO</p>
-					<hr id="heading-border" style = "border-color:white; width:10%; border:2px solid black;margin-top:30px"></hr>
-					
-					</center>
-					<p id="portDesc" style = "color:black; font-family:'proxima-nova'; margin-top:0px; font-size:18px; padding:50px; line-height:2; padding-top:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					
-				<div id="socMedLinks" style = "margin-top:-40px">
-						<center>
-					<img src = "https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/document-48.png" style = "display:inline;margin-right:10px">
-					<img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-48.png" style = "display:inline;margin-right:10px">
-					<img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/instagram_circle-48.png" style = "display:inline;margin-right:10px">
-					<img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/linkedin_circle-48.png" style = "display:inline;margin-right:10px">
-					</center>
-				</div>
-					<!--<div class="row" style = "background-color:white;margin-top:-40px">
-						<div class="col-md-2"></div>
-
-						<div class="col-md-2" style = ""><img src = "https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/document-48.png" style = "float:right"></img></div>
-						<div class="col-md-2"><a href = "https://www.facebook.com/bhutoria.raj" ><img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-48.png" style = "float:left"></img></a></div>
-						<div class="col-md-2"><a href = "https://www.instagram.com/r.bhutoria/" ><img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/instagram_circle-48.png" style = "float:left"></img></a></div>
-						<div class="col-md-2"><a href = "https://www.linkedin.com/in/rbhutoria" ><img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/linkedin_circle-48.png" style = "float:left"></img></a></div>
-						
-						<div class="col-md-2"></div>
-					</div>-->
-					<!--<a style="margin-top:0px;" href="about.html">
-				
-						<button  style = "padding:10px;font-family: 'Roboto','proxima-nova'; background-color:#2980b9; border: 1px solid #FFF;font-size:18px; padding-left:20px; padding-right:20px; font-weight:300;color:white !important;float:right;margin-right:100px">READ MORE</button>
-					</a>-->
-				</div>
-				<div  class='col-md-6' style = "height:500px">
-					<!--<div class = "darken" style = "width:102.2%; height:400px;">
-					</div>-->
-					<center>
-					<!--<iframe width="80%" height="800%"
-src="https://www.youtube.com/embed/La4HRfL5tV4">
-</iframe>-->
-					
-
-					<div style = "height:50px"></div>
-					<div id="portVid" style = "height:400px;width:80%;background-color:gray">
-						<p style = "color:white;padding-top:100px">VIDEO</p>
-					<div>
-					</center>
-				</div>
-			
-			</div>
-
-			<div class = "row" id="aboutContainer" style = 'margin-top:50px'>
-				<div class='col-md-6' id="aboutPic" style = "">
-					<div class = "darken" style = "width:102.2%; height:400px;">
-					</div>
-				</div>
-				<div class = 'col-md-6' id="aboutText" style = "background-color:#2980b9;height:400px" >
-					<center>
-					<p class = "w3-animate-opacity" id="abouttitle" style = "color:white; font-family:'proxima-nova'; margin-top:50px; font-size:30px">About Me</p>
-					<hr id="heading-border" style = "border-color:white; width:10%; border:2px solid white;margin-top:30px"></hr>
-					</center>
-					<p style = "color:white; font-family:'proxima-nova'; margin-top:0px; font-size:18px; padding:50px; line-height:2; padding-top:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae fringilla libero. Ut hendrerit suscipit convallis. Donec ut turpis quis est elementum blandit. Ut viverra ...  <br></p>
-					<a style="margin-top:0px;" href="about.html">
-				
-						<button  style = "padding:10px;font-family: 'Roboto','proxima-nova'; background-color:#2980b9; border: 1px solid #FFF;font-size:18px; padding-left:20px; padding-right:20px; font-weight:300;color:white !important;float:right;margin-right:100px">READ MORE</button>
-					</a>
-				</div>
-			
-			</div>
-
-			<div class="row" id="galleryCont" style = "">
-				<center>  <p style="font-family:'proxima-nova'; font-weight:700; text-align:center;font-size:28px; margin-top:60px; color:black"  class="subtitle fancy"><span id="gallerytitle">MY GALLERY</span></p>
-				<br>
-				
-				<br>
-				<div style="width:100%; height:20px; text-align:center;">
-				<div class = "col-md-3 gallery-img" id="gallerypic1" style = "background-image: url('img/(11).jpg');margin-left:7.5%; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center;">
-						<!--img src = "img/(14).jpg" alt="smiley" style = "height:100%; width:100%; padding:0px !important"-->
-				</div>
-				<div class = "col-md-3 gallery-img" id="gallerypic2" style = "background-image: url('img/(24).jpg');margin-left: 5%; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center;">
-						<!--img src = "img/(21).jpg" alt="smiley" style = "height:100%; width:100%; padding:0px !important"-->
-				</div>
-				<div class = "col-md-3 gallery-img" id="gallerypic3" style = "background-image: url('img/(24).jpg');margin-left: 5%; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center;">
-						<!--img src = "img/(24).jpg" alt="smiley" style = "height:100%; width:100%; padding:0px !important"-->
-				</div>
-				<div class="col-md-1" style ="float:right">
-				</div> 
-
-				</div><br>
-				
-				<br>
-				<br>
-			</div>
-			
-			<div style="margin-top:50px;" href="gallery.html">
-			<a style="margin-top:50px;" href="gallery.html">
-				
-				<center><button  style = "padding:10px; font-family: 'Roboto','proxima-nova'; background-color:white; border: 1px solid #40C4FF;font-size:18px; padding-left:20px; padding-right:20px; font-weight:300;margin-bottom:50px">SEE MORE</button><center>
-				</a>
-			</div>
-			
-
-			
-
-			
-
-
-
-<!--
-			<div class="footer1" style="background-color:#424242;margin-top:40px">
-			<div class="row" style="margin:0px 20%;">
-			<div class="col-md-4" style="font-family: 'Segoe UI';"><center><a style="color:white;" href="https://www.linkedin.com/in/rbhutoria">LinkedIn</a></center></div>
-			<div class="col-md-4" style="font-family: 'Segoe UI';"><center><a style="color:white;" href="https://www.facebook.com/bhutoria.raj">Facebook</a></center></div>
-			<div class="col-md-4" style="font-family: 'Segoe UI';"><center><a style="color:white;" href="contact.html">Contact Me</a></center></div>
-</div>
-			</div>
--->
-<div class="footer cf" style = "background-color:#424242">
-		<div class="contentWrapper">
-			<div class="colFull p2_alt">
-
-				<div class="threeFourths colFullT centeredT p2" >
-					<a href="index.html" class="footerNavItem">Home</a>
-					<a href="about.html" class="footerNavItem">About</a>
-					<a href="gallery.html" class="footerNavItem">Gallery</a>
-					<a href="portfolio.html" class="footerNavItem">Portfolio</a>
-					<a href="contact.html" class="footerNavItem">Contact</a>
-				</div>
-
-				<div class="fourth rAlign m2 centeredT">
-					<div class="footerBlock p3">Connect with Raj</div>
-					<a href="https://www.linkedin.com/in/rbhutoria" target="_blank" class="smIcon"><img src="img/linkedin.svg" alt="LinkedIn"></a>
-					<a href="https://www.facebook.com/bhutoria.raj" target="_blank" class="smIcon"><img src="img/facebook1.png" alt="Facebook"></a>
-				</div>
-
-				<div class="clear"></div>
-				<hr>
-				<div class="full rAlign footerBlock footerBlockNarrow centeredT">
-				</div>
-
-			</div>
-		</div>
-	</div>
-				
-				
-				
-			
-
-			<div class="row">
-			</div>
-		<div tabindex="-1" class="modal fade" id="myModal" role="dialog">
-  			<div class="modal-dialog" style="text-align:center;">
-  				<div class="modal-content">
-    				<div class="modal-header">
-						<button class="close" type="button" data-dismiss="modal">X</button>
-						<h3 class="modal-title" style="font-family:'Open Sans', sans-serif;">Heading</h3>
-					</div>
-					<div class="modal-body" id="modal-body">
-		
-					</div>
-					<div class="modal-footer">
-						<button class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-   				</div>
-  			</div>
-		</div>
-		
-		<script>
-			$(document).ready(function(){       
-   var scroll_start = 0;
-   var startchange = $('#startchange');
-   var offset = startchange.offset();
-   $(document).scroll(function() { 
-		scroll_start = $(this).scrollTop();
-		if(scroll_start > offset.top) {
-			
-          $('#navbar').css({
-    
-    WebkitTransition : 'all 0.25s linear',
-    MozTransition    : 'all .25s linear',
-    MsTransition     : 'all .25s linear',
-    OTransition      : 'all .25s linear',
-    transition       : 'all .25s linear',
-    background		 : 'rgba(41,128,185, 0.85)',
-});
-       } else {
-          $('#navbar').css('background', 'transparent');
-       }
-   });
-});
-
-
-		</script>
-
-		<script type="text/javascript">
-$(window).resize(larg);
-
- function larg(){
- 	if (document.documentElement.clientWidth < 835) {
-		console.log("mobile"); 
-		$('.twoThirdsT').hide();
-		$( "body" ).append( "<script src='navbar.js'><\/script>" ); 
- 	}else{
- 		$('.twoThirdsT').show();
- 	}
- }
-if (document.documentElement.clientWidth < 835) {
-	console.log("mobile"); 
-	$('.twoThirdsT').hide();
-    document.write("<script src='navbar.js'><\/script>");  
- } 
-
-function grabAllData() {
-	var data = JSON.parse(sessionStorage.getItem('home'));
-	var heading =  data[0];
-	var shortdesc =  data[1];
-	var gallerytitle =  data[2];
-	var gallerypic1 =  data[3];
-	var gallerypic2 =  data[4];
-	var gallerypic3 = data[5];
-	var abouttitle =  data[6];
-	var coverpicture =  data[7];
-	var aboutpicture =  data[8];
-
-	document.getElementById('heading').innerHTML = heading;
-	document.getElementById('shortdesc').innerHTML = shortdesc;
-	document.getElementById('gallerytitle').innerHTML = gallerytitle;
-	$('#gallerypic1').css({'background-image': 'url(\''+ gallerypic1 +'\')'});
-	$('#gallerypic2').css({'background-image': 'url(\''+ gallerypic2 +'\')'});
-	$('#gallerypic3').css({'background-image': 'url(\''+ gallerypic3 +'\')'});
-
-	$('#coverpicture').css({'background-image': 'url(\''+ coverpicture +'\')'})
-	$('.darken').css({'background-image': 'url(\''+ aboutpicture +'\')'})
-	document.getElementById('abouttitle').innerHTML = abouttitle;
-
-}
-
-</script>
-
-<script src="cosmic.js"></script>
-	</body>
-
-</html>
+<!DOCTYPE html><html>	<head>	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->		<title>Raj Bhutoria - Home</title>		<script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>		<link rel="stylesheet" href="other-style.css">		<link rel="stylesheet" href="animate.css">		<link rel="stylesheet" href="style.css">		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.css">		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.0.0/ekko-lightbox.js"></script>		<script src="sweetalert-master/dist/sweetalert-dev.js"></script>  		<link rel="stylesheet" href="sweetalert-master/dist/sweetalert.css">  		<link rel="stylesheet" href="w3.css">  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">		<style type="text/css">				@import url('https://fonts.googleapis.com/css?family=Nunito:200,300');			.home:hover{				background: rgba(0,0,0,0.3) !important;			}			.active {				background: rgba(0,0,0,0.3) !important;			}			#navbar{				position:fixed;				width: 100%;				background: transparent;				opacity: 1;				z-index: 1000000;			}			.fancy {  line-height: 0.5;  text-align: center;}.fancy span {  display: inline-block;  position: relative;  }.fancy span:before,.fancy span:after {  content: "";  position: absolute;  height: 5px;  border-bottom: 2px solid #27BDED;    top: 0;  width: 100%;}.fancy span:before {  right: 100%;  margin-right: 15px;}.fancy span:after {  left: 100%;  margin-left: 15px;}.darken {  background-image: url("img/cover.png");    height:50%;    width: 50%;    background-repeat: no-repeat;    background-size: cover;}.gallery-img{	height:300px;	background-size: cover;}		</style>	</head>	<body>		<div class="" id="mobileNav" style="display:none;width:50%;height:1000px;background-color:rgba(0,0,0,0.8);position: fixed;z-index:4567;">						<div id="cross" style="margin-right:0px;padding:10px 20px;font-size:50px;color:white;">				&#735;			</div>			<a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:0px;display: block;color:white;text-decoration: none;"  href="index.html">Home</a>			<a class="" style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="about.html">About</a>			<a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="gallery.html">Gallery</a>			<a class="" style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="portfolio.html">Portfolio</a>			<a class=" " style="font-family: 'proxima-nova';padding-left: 15px;margin-top:20px;display: block;color:white;text-decoration: none;" href="contact.html">Contact</a>		</div>		<div  id="navbar" class="header full">			<div id="threebar" style="margin-right:0px;padding:10px 20px;color:white;">				☰			</div>			<div class="contentWrapper">				<div class="full colFullT">					<div class="colThirdT colHalfP headerSpacer">						<h1 style="color:white;margin-top:20px;font-family: 'Open Sans';"></h1>						</div>											<div class="twoThirdsT halfP">						<a class="navItem home " href="contact.html">Contact</a>						<a class="navItem home" href="portfolio.html">Portfolio</a>						<a class="navItem home " href="gallery.html">Gallery</a>						<a class="navItem home" href="about.html">About</a>						<a class="navItem home "  href="index.html">Home <hr style="margin:0px;border-width: 2px;border-color: white;opacity: 1;"></a>					</div>				</div>			</div>		</div>					<div class="row hiya" id="coverpicture" >				<center> <h1 id="startchange"  class = "bounce"><b id="heading">HI, I'M RAJ BHUTORIA</b></h1> 				<p id="shortdesc" class = "bounce" style="padding: 0px 25% ;">I'm a student at Mission San Jose High School, heavily interested in certain subjects and topics. This is a placeholder. </p></center>			</div>			<!--<div class="row worked-w" >				<center> <h1 style="font-family: 'Raleway'; font-size: 30px;">I'VE WORKED WITH...</h1> 				<br><br>				<div class="col-md-1">				</div>				<div class="col-md-2" style="height: 200px;">					<img src="img/honda.jpg"  style="height:50%; margin-bottom: 20px;">					<p style="height: 50%;">Mike Honda</p>				</div>				<div class="col-md-2" style="height: 200px;">					<img  src="img/khanna.jpg" style="height:50%; margin-bottom: 20px;">					<p style="height: 50%;">Ro Khanna</p>				</div>				<div class="col-md-2" style="height: 200px;">					<img src="img/bobguy.jpg"  style="height:50%; margin-bottom: 20px;border-radius: 50%;" >					<p style="height: 50%;">Bob Wieckowski</p>				</div>				<div class="col-md-2" style="height: 200px;">					<img src="img/radio zindagi.jpg" style="height:50%; margin-bottom: 20px;" style="">					<p style="height: 50%;"> Radio Zindagi</p>				</div> 				<div class="col-md-2" style="height: 200px;">					<img src="img/happydayo.png" style="height:50%; margin-bottom: 20px;"  style="">					<p style="height: 50%;">Happy Day MicroFunds</p>				</div>				<div class="col-md-1">				</div> 				</center>							</div>-->			<div class="row quotes" style="background-color:rgba(41,128,185,1);color:white;padding: 20px 0px;">				<div class="col-md-6" style="padding-left:40px;border-right: 3px solid rgba(255,255,255, 0.2);">					<div class="row ">						<div class="col-md-3" style="margin-top: 30px;padding: 0px;">							<img src="http://www.newyorker.com/wp-content/uploads/2014/11/Lizza-Hillary-Clinton-1200.jpg" style="width:100%;border-radius:50%;display:inline-block;float:right;margin-bottom: 10px;">							<p style = "line-height:22px;width:100%;margin-top:10px;text-align:center;"><b>Hillary Clinton</b><br><i style="font-size:16px;">Secretary of State</i></p>						</div>						<div class="col-md-9">							<div style = "text-align:left;padding:25px;padding-right:0px;padding-bottom: 5px">								<img src="https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/75-32.png" style = "color:red;opacity:0.2; "><br>								<blockquote class="bq3" style ="margin-left:20px;margin-bottom:0px;border-color:transparent;">      							<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.</i></p></blockquote>      						</div>							</div>					</div>      			</div>				<div class="col-md-6"  style="padding-left:40px;">					<div class="row">						<div class="col-md-3" style="margin-top: 30px;padding: 0px;">							<img src="https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX.jpg" style="width:100%;border-radius:50%;display:inline-block;float:right;margin-bottom: 10px;">							<p style = "line-height:22px;width:100%;margin-top:10px;text-align:center;"><b>Barack Obama</b><br><i style="font-size:16px;">Former President of the United States</i></p>						</div>						<div class="col-md-9">							<div style = "padding:25px;padding-right:0px;padding-bottom: 5px">								<img src="https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/75-32.png" style = "color:red;opacity:0.2; "><br>								<blockquote class="bq3" style ="margin-left:20px;margin-bottom:0px;border-color:transparent;">      							<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.</i></p></blockquote>      						</div>							</div>					</div>      			</div>      										</div>			<hr style = "margin-top:0px;color:black;border-width:3px;opacity:1">			<div class = "row" style = ''>								<div class = 'col-md-6' style = "background-color:#fff;height:500px;padding:50px;padding-top:0px;" >					<center>					<p  id="heading" class = "w3-animate-opacity" id="" style = "color:black; font-family:'proxima-nova'; margin-top:50px; font-size:30px;;width:60%;">PORTFOLIO</p>					<hr id="heading-border" style = "border-color:white; width:10%; border:2px solid black;margin-top:30px"></hr>										</center>					<p id="portDesc" style = "color:black; font-family:'proxima-nova'; margin-top:0px; font-size:18px; padding:50px; line-height:2; padding-top:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>									<div id="socMedLinks" style = "margin-top:-40px">						<center>					<img src = "https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/document-48.png" style = "display:inline;margin-right:10px">					<img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-48.png" style = "display:inline;margin-right:10px">					<img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/instagram_circle-48.png" style = "display:inline;margin-right:10px">					<img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/linkedin_circle-48.png" style = "display:inline;margin-right:10px">					</center>				</div>					<!--<div class="row" style = "background-color:white;margin-top:-40px">						<div class="col-md-2"></div>						<div class="col-md-2" style = ""><img src = "https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/document-48.png" style = "float:right"></img></div>						<div class="col-md-2"><a href = "https://www.facebook.com/bhutoria.raj" ><img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-48.png" style = "float:left"></img></a></div>						<div class="col-md-2"><a href = "https://www.instagram.com/r.bhutoria/" ><img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/instagram_circle-48.png" style = "float:left"></img></a></div>						<div class="col-md-2"><a href = "https://www.linkedin.com/in/rbhutoria" ><img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/linkedin_circle-48.png" style = "float:left"></img></a></div>												<div class="col-md-2"></div>					</div>-->					<!--<a style="margin-top:0px;" href="about.html">										<button  style = "padding:10px;font-family: 'Roboto','proxima-nova'; background-color:#2980b9; border: 1px solid #FFF;font-size:18px; padding-left:20px; padding-right:20px; font-weight:300;color:white !important;float:right;margin-right:100px">READ MORE</button>					</a>-->				</div>				<div  class='col-md-6' style = "height:500px">					<!--<div class = "darken" style = "width:102.2%; height:400px;">					</div>-->					<center>					<!--<iframe width="80%" height="800%"src="https://www.youtube.com/embed/La4HRfL5tV4"></iframe>-->										<div style = "height:50px"></div>					<div id="portVid" style = "height:400px;width:80%;background-color:gray">						<p style = "color:white;padding-top:100px">VIDEO</p>					<div>					</center>				</div>						</div>			<div class = "row" id="aboutContainer" style = 'margin-top:50px'>				<div class='col-md-6' id="aboutPic" style = "">					<div class = "darken" style = "width:102.2%; height:400px;">					</div>				</div>				<div class = 'col-md-6' id="aboutText" style = "background-color:#2980b9;height:400px" >					<center>					<p class = "w3-animate-opacity" id="abouttitle" style = "color:white; font-family:'proxima-nova'; margin-top:50px; font-size:30px">About Me</p>					<hr id="heading-border" style = "border-color:white; width:10%; border:2px solid white;margin-top:30px"></hr>					</center>					<p style = "color:white; font-family:'proxima-nova'; margin-top:0px; font-size:18px; padding:50px; line-height:2; padding-top:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae fringilla libero. Ut hendrerit suscipit convallis. Donec ut turpis quis est elementum blandit. Ut viverra ...  <br></p>					<a style="margin-top:0px;" href="about.html">										<button  style = "padding:10px;font-family: 'Roboto','proxima-nova'; background-color:#2980b9; border: 1px solid #FFF;font-size:18px; padding-left:20px; padding-right:20px; font-weight:300;color:white !important;float:right;margin-right:100px">READ MORE</button>					</a>				</div>						</div>			<div class="row" id="galleryCont" style = "">				<center>  <p style="font-family:'proxima-nova'; font-weight:700; text-align:center;font-size:28px; margin-top:60px; color:black"  class="subtitle fancy"><span id="gallerytitle">MY GALLERY</span></p>				<br>								<br>				<div style="width:100%; height:20px; text-align:center;">				<div class = "col-md-3 gallery-img" id="gallerypic1" style = "background-image: url('img/(11).jpg');margin-left:7.5%; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center;">						<!--img src = "img/(14).jpg" alt="smiley" style = "height:100%; width:100%; padding:0px !important"-->				</div>				<div class = "col-md-3 gallery-img" id="gallerypic2" style = "background-image: url('img/(24).jpg');margin-left: 5%; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center;">						<!--img src = "img/(21).jpg" alt="smiley" style = "height:100%; width:100%; padding:0px !important"-->				</div>				<div class = "col-md-3 gallery-img" id="gallerypic3" style = "background-image: url('img/(24).jpg');margin-left: 5%; padding:0px !important; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align:center;">						<!--img src = "img/(24).jpg" alt="smiley" style = "height:100%; width:100%; padding:0px !important"-->				</div>				<div class="col-md-1" style ="float:right">				</div> 				</div><br>								<br>				<br>			</div>						<div style="margin-top:50px;" href="gallery.html">			<a style="margin-top:50px;" href="gallery.html">								<center><button  style = "padding:10px; font-family: 'Roboto','proxima-nova'; background-color:white; border: 1px solid #40C4FF;font-size:18px; padding-left:20px; padding-right:20px; font-weight:300;margin-bottom:50px">SEE MORE</button><center>				</a>			</div>									<!--			<div class="footer1" style="background-color:#424242;margin-top:40px">			<div class="row" style="margin:0px 20%;">			<div class="col-md-4" style="font-family: 'Segoe UI';"><center><a style="color:white;" href="https://www.linkedin.com/in/rbhutoria">LinkedIn</a></center></div>			<div class="col-md-4" style="font-family: 'Segoe UI';"><center><a style="color:white;" href="https://www.facebook.com/bhutoria.raj">Facebook</a></center></div>			<div class="col-md-4" style="font-family: 'Segoe UI';"><center><a style="color:white;" href="contact.html">Contact Me</a></center></div></div>			</div>--><div class="footer cf" style = "background-color:#424242">		<div class="contentWrapper">			<div class="colFull p2_alt">				<div class="threeFourths colFullT centeredT p2" >					<a href="index.html" class="footerNavItem">Home</a>					<a href="about.html" class="footerNavItem">About</a>					<a href="gallery.html" class="footerNavItem">Gallery</a>					<a href="portfolio.html" class="footerNavItem">Portfolio</a>					<a href="contact.html" class="footerNavItem">Contact</a>				</div>				<div class="fourth rAlign m2 centeredT">					<div class="footerBlock p3">Connect with Raj</div>					<a href="https://www.linkedin.com/in/rbhutoria" target="_blank" class="smIcon"><img src="img/linkedin.svg" alt="LinkedIn"></a>					<a href="https://www.facebook.com/bhutoria.raj" target="_blank" class="smIcon"><img src="img/facebook1.png" alt="Facebook"></a>				</div>				<div class="clear"></div>				<hr>				<div class="full rAlign footerBlock footerBlockNarrow centeredT">				</div>			</div>		</div>	</div>																		<div class="row">			</div>		<div tabindex="-1" class="modal fade" id="myModal" role="dialog">  			<div class="modal-dialog" style="text-align:center;">  				<div class="modal-content">    				<div class="modal-header">						<button class="close" type="button" data-dismiss="modal">X</button>						<h3 class="modal-title" style="font-family:'Open Sans', sans-serif;">Heading</h3>					</div>					<div class="modal-body" id="modal-body">							</div>					<div class="modal-footer">						<button class="btn btn-default" data-dismiss="modal">Close</button>					</div>   				</div>  			</div>		</div>				<script>			$(document).ready(function(){          var scroll_start = 0;   var startchange = $('#startchange');   var offset = startchange.offset();     $(document).scroll(function() { 		scroll_start = $(this).scrollTop();		if(scroll_start > offset.top) {			          $('#navbar').css({        WebkitTransition : 'all 0.25s linear',    MozTransition    : 'all .25s linear',    MsTransition     : 'all .25s linear',    OTransition      : 'all .25s linear',    transition       : 'all .25s linear',    background		 : 'rgba(41,128,185, 0.85)',});       } else {          $('#navbar').css('background', 'transparent');       }   });});		</script>		<script type="text/javascript">$(window).resize(larg); function larg(){ 	if (document.documentElement.clientWidth < 835) {		console.log("mobile"); 		$('.twoThirdsT').hide();		$( "body" ).append( "<script src='navbar.js'><\/script>" );  	}else{ 		$('.twoThirdsT').show(); 	} }if (document.documentElement.clientWidth < 835) {	console.log("mobile"); 	$('.twoThirdsT').hide();    document.write("<script src='navbar.js'><\/script>");   } function grabAllData() {	var data = JSON.parse(sessionStorage.getItem('home'));	var heading =  data[0];	var shortdesc =  data[1];	var gallerytitle =  data[2];	var gallerypic1 =  data[3];	var gallerypic2 =  data[4];	var gallerypic3 = data[5];	var abouttitle =  data[6];	var coverpicture =  data[7];	var aboutpicture =  data[8];	document.getElementById('heading').innerHTML = heading;	document.getElementById('shortdesc').innerHTML = shortdesc;	document.getElementById('gallerytitle').innerHTML = gallerytitle;	$('#gallerypic1').css({'background-image': 'url(\''+ gallerypic1 +'\')'});	$('#gallerypic2').css({'background-image': 'url(\''+ gallerypic2 +'\')'});	$('#gallerypic3').css({'background-image': 'url(\''+ gallerypic3 +'\')'});	$('#coverpicture').css({'background-image': 'url(\''+ coverpicture +'\')'})	$('.darken').css({'background-image': 'url(\''+ aboutpicture +'\')'})	document.getElementById('abouttitle').innerHTML = abouttitle;}</script><script src="cosmic.js"></script>	</body></html>

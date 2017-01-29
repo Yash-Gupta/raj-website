@@ -43,6 +43,24 @@
 		.divider-buttons.active, .divider-buttons:hover{
 			background-color: rgba(41,128,185, 0.85);
 		}
+		p{
+			font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    		line-height: 1.6em;
+    		font-family: "proxima-nova";
+    		font-size: 16px;
+    		line-height: 1.8em;
+    		letter-spacing: 0px;
+    		font-weight: 400;
+    		font-style: normal;
+    		color: rgba(26,26,26,.6);
+		}
+		li{
+			font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+			line-height: 1.5em;
+			font-size: 16px;
+		}
+
+
 	</style>
 	</head>
 
@@ -358,7 +376,7 @@
 							<img src="https://cosmicjs.com/uploads/7f73a090-d546-11e6-98c0-25f7dd121a93-(6).jpg" alt="" style="border-radius: 3px;">
 						</div>
 						<div class="col-md-8">
-						<h1 style="font-family:'proxima-nova';font-size: 25px;"><b>Senior Intern for Bob Wieckowski</b></h1>
+						<h1 style="font-family:'proxima-nova';font-size: 25px;"><b>dope Intern for Bob Wieckowski</b></h1>
 						<p>October 2015 – Present</p>
 						<p>
 							<p>&nbsp;Interned at the Office of California Senator Bob Wieckowski, as well as developed election campaign through team efforts for Senator Wieckowski.</p><ul><li>Researched current events, issues, as well as policy initiatives.</li><li>Sorted and interacted with constituent emails, and maintained correspondence.</li><li>Organized and staffed several events with Senator Wieckowski.</li><li>Developed and updated important databases.</li></ul>
@@ -528,17 +546,21 @@
 			    			var colEight = document.createElement("div");
 							colEight.setAttribute('class', 'col-md-8');
 								var title = document.createElement('h1');
-								title.setAttribute('style', "font-family:'proxima-nova'; font-size: 25px;");
+								title.setAttribute('style', "font-family:'proxima-nova'; font-size: 16px;text-transform: uppercase;color:black;line-height:1.8em;letter-spacing: 2px;");
 									var bold = document.createElement('b');
 										bold.innerHTML = longtitle;
 
 								title.appendChild(bold);
 
 								var dateP = document.createElement('p');
+								dateP.setAttribute('style',"font-family: 'proxima-nova';font-size: 16px;line-height: 1.8em;letter-spacing: 0px;color: rgba(26,26,26,.6);font-size: 16px;")
 								dateP.innerHTML = date;
 
 								var descP = document.createElement('p');
+
+								descP.setAttribute('style',"font-family: 'proxima-nova';font-size:5px;color: rgba(26,26,26,.6);")
 								descP.innerHTML = longdesc;
+								
 
 								colEight.appendChild(title);
 								colEight.appendChild(dateP);
