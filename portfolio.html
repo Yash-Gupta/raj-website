@@ -24,6 +24,17 @@
 			}
 
 		}
+
+		.resumebutton:hover{
+			text-decoration: none;
+			color:white;
+			background-color: rgba(244,67,54,0.85); 
+			transition: background-color 0.5s linear;
+		}
+		.resumebutton{
+			text-decoration: none;
+			color:white !important;
+		}
 		.divider-buttons{
 			padding:0px; 
 			font-family: 'Lato'; 
@@ -42,6 +53,22 @@
 
 		.divider-buttons.active, .divider-buttons:hover{
 			background-color: rgba(41,128,185, 0.85);
+		}
+		
+		.resumebutton{
+			padding:0px; 
+			font-family: 'Lato'; 
+			background-color:rgba(0,0,0,0.7); 
+			transition: background-color 0.5s linear;
+			border: none;
+			font-size:13px; 
+			padding-left:20px; 
+			padding-right:20px; 
+			color:white; 
+			line-height:0.8;
+			padding:10px 28px;
+			display: inline-block;
+			margin-right:5px
 		}
 		p{
 			font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -105,6 +132,8 @@
 				<button class="divider-buttons" id="awardsBtn" goto="awards" type = "submit" >AWARDS</button>
 
 				<button class="divider-buttons" id="volunteerBtn" goto="volunteer" type = "submit">VOLUNTEERING</button>
+
+				<a class="resumebutton" id="volunteerBtn" type = "submit" href="https://www.google.com" >VIEW RESUME</a>
 
 				 <div style = "height:50px; width:100%"></div>
 
