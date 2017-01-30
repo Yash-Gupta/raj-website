@@ -21,7 +21,21 @@
 		<style type="text/css">
 		
 		@import url('https://fonts.googleapis.com/css?family=Nunito:200,300');
+@media only screen and (max-device-width: 480px) {
+	#quotePic1, #quotePic2{
+		width: 40% !important;
+		float:left !important;
+	}
 
+	#quoteAuthor1, #quoteAuthor2{
+		padding-top: 130px !important;
+	}
+
+	#quoteP1, #quoteP2{
+		padding-top: 50px !important;
+	}
+
+}
 
 
 
@@ -159,12 +173,12 @@
 					<div id="quote1" class="row ">
 						<div  class="col-md-3" style="margin-top: 30px;padding: 0px;">
 							<img id="quotePic1"  src="http://www.newyorker.com/wp-content/uploads/2014/11/Lizza-Hillary-Clinton-1200.jpg" style="width:100%;border-radius:50%;display:inline-block;float:right;margin-bottom: 10px;">
-							<p style = "line-height:22px;width:100%;margin-top:10px;text-align:center;"><b id="quoteAuthor1" >Hillary Clinton</b><br><i style="font-size:16px;" id="quoteAuthorDesc1" >Secretary of State</i></p>
+							<p id="quoteP1" style = "line-height:22px;width:100%;margin-top:10px;text-align:center;"><b id="quoteAuthor1" >Hillary Clinton</b><br><i style="font-size:16px;" id="quoteAuthorDesc1" >Secretary of State</i></p>
 						</div>
-						<div class="col-md-9">
+						<div class="col-md-9" id="bq1">
 							<div style = "text-align:left;padding:25px;padding-right:0px;padding-bottom: 5px">
 								<img src="https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/75-32.png" style = "color:red;opacity:0.2; "><br>
-								<blockquote class="bq3" style ="margin-left:20px;margin-bottom:0px;border-color:transparent;">
+								<blockquote  class="bq3" style ="margin-left:20px;margin-bottom:0px;border-color:transparent;">
       							<p><i id="quoteQuote1" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.</i></p></blockquote>
       						</div>	
 						</div>
@@ -175,12 +189,12 @@
 					<div id="quote2" class="row">
 						<div class="col-md-3" style="margin-top: 30px;padding: 0px;">
 							<img id="quotePic2" src="https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX.jpg" style="width:100%;border-radius:50%;display:inline-block;float:right;margin-bottom: 10px;">
-							<p style = "line-height:22px;width:100%;margin-top:10px;text-align:center;"><b id="quoteAuthor2" >Barack Obama</b><br><i id="quoteAuthorDesc2"  style="font-size:16px;">Former President of the United States</i></p>
+							<p id="quoteP2" style = "line-height:22px;width:100%;margin-top:10px;text-align:center;"><b id="quoteAuthor2" >Barack Obama</b><br><i id="quoteAuthorDesc2"  style="font-size:16px;">Former President of the United States</i></p>
 						</div>
-						<div class="col-md-9">
+						<div class="col-md-9" id="bq2">
 							<div style = "padding:25px;padding-right:0px;padding-bottom: 5px">
 								<img src="https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/75-32.png" style = "color:red;opacity:0.2; "><br>
-								<blockquote class="bq3" style ="margin-left:20px;margin-bottom:0px;border-color:transparent;">
+								<blockquote  class="bq3" style ="margin-left:20px;margin-bottom:0px;border-color:transparent;">
       							<p><i id="quoteQuote2" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.</i></p></blockquote>
       						</div>	
 						</div>
@@ -200,7 +214,7 @@
 					</center>
 					<p id="portDesc" style = "color:black; font-family:'proxima-nova'; margin-top:0px; font-size:18px; padding:50px; line-height:2; padding-top:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					
-				<div id="socMedLinks" style = "margin-top:-40px">
+				<div id="socMedLinks" style = "margin-top:-40px;margin-bottom:30px;"> 
 						<center>
 					<a id ="resumeLink" href="google.com"><img src = "https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/document-48.png" style = "display:inline;margin-right:10px"></a>
 					<a href="https://www.facebook.com/bhutoria.raj"><img src = "https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-48.png" style = "display:inline;margin-right:10px"></a>
