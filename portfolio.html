@@ -133,7 +133,7 @@
 
 				<button class="divider-buttons" id="volunteerBtn" goto="volunteer" type = "submit">VOLUNTEERING</button>
 
-				<a class="resumebutton" id="volunteerBtn" type = "submit" href="https://www.google.com" >VIEW RESUME</a>
+				<a class="resumebutton" id="resumeBtn" type = "submit" href="https://www.google.com" >VIEW RESUME</a>
 
 				 <div style = "height:50px; width:100%"></div>
 
@@ -548,6 +548,11 @@
 				$('#experience').empty();
 				$('#awards').empty();
 				$('#volunteer').empty();
+
+				var resumeData = JSON.parse(sessionStorage.getItem('home'));
+				var resume =  resumeData[9];
+
+				$('#resumeBtn').attr('href', resume);
 
 				var data = JSON.parse(sessionStorage.getItem('portfolio'));
 			    	for(var i = 0; i < data.length; i++){
