@@ -172,7 +172,7 @@
 
             <div class = "col-md-4" style="">
                 <div class="jumbotron" style=" background-color:#424242">
-                    <center><div style="background: url('img/(27).jpg') 50% 50% no-repeat;background-size: cover; border-radius:50%; width:180px; height:180px"></div>
+                    <center><div id="contactPicture" style="background: url('img/(27).jpg') 50% 50% no-repeat;background-size: cover; border-radius:50%; width:180px; height:180px"></div>
                         <hr style="width:80%;border-color:white"></center>
 
                         <br>
@@ -282,6 +282,17 @@ if (document.documentElement.clientWidth < 835) {
  } 
 
 </script>
+
+<script>
+    function grabAllData(){
+        var contact = JSON.parse(sessionStorage.getItem('contact'));
+
+        $('#contactPicture').css({'background', 'url('+ contact[0] +')'});
+    }   
+</script>
+
+
+<script src="cosmic.js"></script>
     </body>
 </html>
 

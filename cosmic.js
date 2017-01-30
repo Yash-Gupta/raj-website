@@ -55,10 +55,10 @@ $.get("https://api.cosmicjs.com/v1/raj-website",{},
 				var abouttitle = data['bucket']['objects'][i]['metadata']['abouttitle'];
 				var coverpicture = data['bucket']['objects'][i]['metadata']['coverpicture']['url'];
 				var aboutpicture = data['bucket']['objects'][i]['metadata']['aboutpicture']['url'];
-				var resumelink = data['bucket']['objects'][i]['metadata']['resume']['url'];
+				var resumelink = data['bucket']['objects'][i]['metadata']['resume'];
+				var videovimeo = data['bucket']['objects'][i]['metadata']['videovimeolink'];
 
-
-				var homeJSON = [heading, shortdesc, gallerytitle, gallerypic1, gallerypic2, gallerypic3, abouttitle, coverpicture, aboutpicture, resumelink];
+				var homeJSON = [heading, shortdesc, gallerytitle, gallerypic1, gallerypic2, gallerypic3, abouttitle, coverpicture, aboutpicture, resumelink, videovimeo];
 				sessionStorage.setItem('home', JSON.stringify(homeJSON));
 				//format for home
 				//home = [heading, shortdesc, gallerytitle, gallerypic1, gallerypic2, gallerypic3, abouttitle]
@@ -70,6 +70,11 @@ $.get("https://api.cosmicjs.com/v1/raj-website",{},
 
 				var aboutJSON = [description, shortdesc, aboutpicture];
 				sessionStorage.setItem('about', JSON.stringify(aboutJSON));
+			}else if(data['bucket']['objects'][i]['slug'] == "contact"){
+				var contactpic = data['bucket']['objects'][i]['metadata']['picture']['url'];
+
+				var contactJSON = [contactpic];
+				sessionStorage.setItem('contact', JSON.stringify(contactJSON));
 			}else if(data['bucket']['objects'][i]['type_slug'] == "quotes"){
 				var author= data['bucket']['objects'][i]['metadata']['author'];
 				var author_desc = data['bucket']['objects'][i]['metadata']['author_desc'];
