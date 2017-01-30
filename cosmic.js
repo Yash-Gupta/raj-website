@@ -84,7 +84,7 @@ $.get("https://api.cosmicjs.com/v1/raj-website",{},
 
 			} 
 		}//end of for loop going through all objects
-		//sessionStorage.setItem('media', JSON.stringify(mediaJSON));
+		sessionStorage.setItem('media', JSON.stringify(mediaJSON));
 		sessionStorage.setItem('portfolio', JSON.stringify(portfolioJSON));
 		sessionStorage.setItem('quotes', JSON.stringify(quoteJSON));
 		grabAllData();
