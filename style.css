@@ -57,7 +57,7 @@ h3{
     cursor: pointer;
     object-fit: cover;
 
-    width:200px;height:200px;overflow:hidden
+    width:200px;height:325px;overflow:hidden
 }
 
 .nav-container{
@@ -125,8 +125,7 @@ h3{
 }
 
 .hiya{
-    height:90vh;
-    padding-top: 18%;
+    height:80vh;
    /* background: url(img/cover.png) no-repeat;*/
     background-size: cover;
     background-position: center;
@@ -390,6 +389,10 @@ a.navItem{
         background-position: center; 
     }
 
+    .hiya h1{
+        margin-top:350px !important;
+    }
+
     #startchange{
         font-size:30px;
         margin-top: 100px;
@@ -478,6 +481,7 @@ a.navItem{
 
     .img-fluid{
         margin-bottom: 10px;
+        height:325px;
     }
 
     #gallery-top>.col-md-2{
