@@ -34,8 +34,8 @@ $.get("https://api.cosmicjs.com/v1/raj-website",{},
 				var title = data['bucket']['objects'][i]['metadata']['title'];
 				var longtitle = data['bucket']['objects'][i]['metadata']['longtitle'];
 				var type = data['bucket']['objects'][i]['metadata']['type'];
-
-				var portJsonData = [picUrl, date, longdesc, shortdesc, title, longtitle, type];
+				var activity = data['bucket']['objects'][i]['metadata']['activity'];
+				var portJsonData = [picUrl, date, longdesc, shortdesc, title, longtitle, type, activity];
 
 				portfolioJSON[numOfPortObj] = portJsonData;
 				numOfPortObj++;
