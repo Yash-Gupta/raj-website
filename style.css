@@ -57,7 +57,7 @@ h3{
     cursor: pointer;
     object-fit: cover;
 
-    width:200px;height:325px;overflow:hidden
+    width:200px;height:200px;overflow:hidden
 }
 
 .nav-container{
@@ -481,7 +481,7 @@ a.navItem{
 
     .img-fluid{
         margin-bottom: 10px;
-        height:325px;
+        height:200px;
     }
 
     #gallery-top>.col-md-2{
