@@ -261,7 +261,10 @@ src="https://www.youtube.com/embed/La4HRfL5tV4">
 					<p class = "w3-animate-opacity" id="abouttitle" style = "color:white; font-family:'proxima-nova'; margin-top:50px; font-size:30px">About Me</p>
 					<hr id="heading-border" style = "border-color:white; width:10%; border:2px solid white;margin-top:30px"></hr>
 					</center>
-					<p style = "color:white; font-family:'proxima-nova'; margin-top:0px; font-size:18px; padding:50px; line-height:2; padding-top:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae fringilla libero. Ut hendrerit suscipit convallis. Donec ut turpis quis est elementum blandit. Ut viverra ...  <br></p>
+					<p id="aboutEx" style = "display: -webkit-box;color:white; font-family:'proxima-nova'; margin-top:0px; font-size:18px; padding:50px; padding-top: 0px;overflow: hidden;line-height:2; height:110px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae fringilla libero. Ut hendrerit suscipit convallis. Donec ut turpis quis est elementum blandit. Ut viverra ...  <br></p>
 					<a style="margin-top:0px;" href="about.html">
 				
 						<button  style = "padding:10px;font-family: 'Roboto','proxima-nova'; background-color:#2980b9; border: 1px solid #FFF;font-size:18px; padding-left:20px; padding-right:20px; font-weight:300;color:white !important;float:right;margin-right:100px">READ MORE</button>
@@ -433,10 +436,14 @@ function grabAllData() {
 	var video =  data[10];
 	var portDesc2 = data[11];
 
+	var aboutData = JSON.parse(sessionStorage.getItem('about'));
+	var aboutDesc = aboutData[0]
+
 	document.getElementById('heading').innerHTML = heading;
 	document.getElementById('shortdesc').innerHTML = shortdesc;
 	document.getElementById('portDesc').innerHTML = portDesc2;
 	document.getElementById('gallerytitle').innerHTML = gallerytitle;
+	document.getElementById('aboutEx').innerHTML = aboutDesc;
 	$('#gallerypic1').css({'background-image': 'url(\''+ gallerypic1 +'\')'});
 	$('#gallerypic2').css({'background-image': 'url(\''+ gallerypic2 +'\')'});
 	$('#gallerypic3').css({'background-image': 'url(\''+ gallerypic3 +'\')'});
