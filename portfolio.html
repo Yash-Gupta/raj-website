@@ -144,6 +144,8 @@
 
 				<button class="divider-buttons" id="volunteerBtn" goto="volunteer" type = "submit">VOLUNTEERING</button>
 
+				<button class="divider-buttons" id="certificatesBtn" goto="certificates" type = "submit">CERTIFICATES</button>
+
 				<a class="resumebutton" id="resumeBtn" type = "submit" target="_blank" href="https://drive.google.com/file/d/0B6WZU9JlDKVpRnJ0YVJtV21kaUk/view" >VIEW RESUME</a>
 
 				 <div style = "height:50px; width:100%"></div>
@@ -416,7 +418,7 @@
 							<img src="https://cosmicjs.com/uploads/7f73a090-d546-11e6-98c0-25f7dd121a93-(6).jpg" alt="" style="border-radius: 3px;">
 						</div>
 						<div class="col-md-8">
-							<h1 style="font-family:'proxima-nova';font-size: 25px;display:inline-block"><b>dope Intern for Bob Wieckowski</b></h1>
+							<h1 style="font-family:'proxima-nova';font-size: 25px;display:inline-block"><b>Intern for Bob Wieckowski</b></h1>
 							<p style = "font-family:'proxima-nova';font-size: 14px;display:inline-block;float:right">October 2016 - Present</p>
 							<p>CEO and Founder</p>
 							<p>
@@ -434,6 +436,11 @@
 
 			</div>
 			<div class="row" id="volunteer" style="clear:both;margin-top:0%; padding:0px 150px;margin-bottom:50px">		
+					
+
+			</div>
+
+			<div class="row" id="certificates" style="clear:both;margin-top:0%; padding:0px 150px;margin-bottom:50px">		
 					
 
 			</div>
@@ -505,11 +512,15 @@
 					$('#experienceBtn').attr('class', 'divider-buttons');
 					$('#awardsBtn').attr('class', 'divider-buttons');
 					$('#volunteerBtn').attr('class', 'divider-buttons');
+					$('#certificatesBtn').attr('class', 'divider-buttons');
+
 
 					$(this).attr('class', 'divider-buttons active');
 					$('#experience').hide();
 					$('#awards').hide();
 					$('#volunteer').hide();
+					$('#certificates').hide();
+
 					$('#' + showDiv).show();
 					$('#' + showDiv).addClass("animated fadeInUp");
 
@@ -518,6 +529,7 @@
 				$('#experience').show();
 				$('#awards').hide();
 				$('#volunteer').hide();
+				$('#certificates').hide();
 
 			});
 		</script>
@@ -551,6 +563,8 @@
 				$('#experience').empty();
 				$('#awards').empty();
 				$('#volunteer').empty();
+				$('#certificates').empty();
+
 
 				var resumeData = JSON.parse(sessionStorage.getItem('home'));
 				var resume =  resumeData[9];
